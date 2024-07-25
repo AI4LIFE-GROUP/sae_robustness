@@ -1,12 +1,5 @@
 ## Introduction
-This library trains _k_-sparse autoencoders (SAEs) on the residual stream activations of HuggingFace language models, roughly following the recipe detailed in [Scaling and evaluating sparse autoencoders](https://arxiv.org/abs/2406.04093v1) (Gao et al. 2024).
-
-This is a lean, simple library with few configuration options. Unlike most other SAE libraries (e.g. [SAELens](https://github.com/jbloomAus/SAELens), it does not cache activations on disk, but rather computes them on-the-fly. This allows us to scale to very large models and datasets with zero storage overhead, but has the downside that trying different hyperparameters for the same model and dataset will be slower than if we cached activations (since activations will be re-computed). We may add caching as an option in the future.
-
-Unlike other libraries, we also train an SAE for _every_ layer of the network at once, rather than choosing a single layer to focus on. We will likely add the option to skip layers in the near future.
-
-Following Gao et al., we use a TopK activation function which directly enforces a desired level of sparsity in the activations. This is in contrast to other libraries which use an L1 penalty in the loss function. We believe TopK is a Pareto improvement over the L1 approach, and hence do not plan on supporting it.
-
+This project repo is based on the SAE library https://github.com/EleutherAI/sae, with some customized local package changes. The trained SAEs are loaded from https://huggingface.co/EleutherAI/sae-llama-3-8b-32x.
 ## Loading pretrained SAEs
 
 To load a pretrained SAE from the HuggingFace Hub, you can use the `Sae.load_from_hub` method as follows:
@@ -103,15 +96,3 @@ torchrun --nproc_per_node gpu -m sae meta-llama/Meta-Llama-3-8B --distribute_lay
 ```
 
 The above command trains an SAE for every _even_ layer of Llama 3 8B, using all available GPUs. It accumulates gradients over 8 minibatches, and splits each minibatch into 2 microbatches before feeding them into the SAE encoder, thus saving a lot of memory. It also loads the model in 8-bit precision using `bitsandbytes`. This command requires no more than 48GB of memory per GPU on an 8 GPU node.
-
-## TODO
-
-There are several features that we'd like to add in the near future:
-- [x] Distributed Data Parallel (HIGH PRIORITY)
-- [x] Implement AuxK loss for preventing dead latents (HIGH PRIORITY)
-- [x] Sharding / tensor parallelism for the SAEs (and model too?)
-- [x] Support for skipping layers
-- [ ] Support for caching activations
-- [ ] Evaluate SAEs with KL divergence when grafted into the model
-
-If you'd like to help out with any of these, please feel free to open a PR! You can collaborate with us in the sparse-autoencoders channel of the EleutherAI Discord.
