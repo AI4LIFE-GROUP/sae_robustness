@@ -76,7 +76,8 @@ class Sae(nn.Module):
     ) -> dict[str, "Sae"]:
         """Load SAEs for multiple hookpoints on a single model and dataset."""
         pattern = pattern + "/*" if pattern is not None else None
-        repo_path = Path(snapshot_download(name, allow_patterns=pattern))
+        # Added local_dir
+        repo_path = Path(snapshot_download(name, allow_patterns=pattern, local_dir="/n/holyscratch01/hlakkaraju_lab/Lab/aaronli/sae"))
 
         files = [
             f for f in repo_path.iterdir()
@@ -96,9 +97,10 @@ class Sae(nn.Module):
         decoder: bool = True,
     ) -> "Sae":
         # Download from the HuggingFace Hub
+        # Added local_dir
         repo_path = Path(
             snapshot_download(
-                name, allow_patterns=f"layer_{layer}/*" if layer is not None else None,
+                name, allow_patterns=f"layer_{layer}/*" if layer is not None else None, local_dir="/n/holyscratch01/hlakkaraju_lab/Lab/aaronli/sae"
             )
         )
         if layer is not None:
