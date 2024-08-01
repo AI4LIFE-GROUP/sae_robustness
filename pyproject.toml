@@ -14,13 +14,11 @@ dependencies = [
     "datasets",
     "einops",
     "huggingface-hub",
-    "jaxtyping",
     "natsort",  # For sorting module names
     "safetensors",
     "simple-parsing",
     "torch",
     "transformers",
-    "triton",
 ]
 version = "0.1.0"
 
