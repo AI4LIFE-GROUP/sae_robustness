@@ -5,6 +5,8 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import pandas as pd
+from tqdm import tqdm
+import re
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
 BASE_DIR = "/n/netscratch/hlakkaraju_lab/Lab/aaronli/sae/"
@@ -33,7 +35,7 @@ def count_common(x, y):
 
 data_file = "./sae_samples_50.csv"
 df = pd.read_csv(data_file)
-sample_idx = 16
+sample_idx = 10
 layer_num = 20
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
@@ -60,17 +62,11 @@ top_idx_target = sae.encode(h_target).top_indices
 initial_overlap = count_common(top_idx_src, top_idx_target) / len(top_idx_src)
 print(f"Initial overlap ratio = {initial_overlap}")
 
-num_iters = 7
-k = 200
-# batch_size = 1000
-
 x_src = torch.tensor(tokenizer.encode(src_text)).unsqueeze(0).to(DEVICE)
 x_src_old = x_src.clone()
 
 model.to(DEVICE)
-best_loss = 100.0
 
-similarities = []
 overlaps = []
 overlap_increases = []
 overlap_increase_ratios = []
@@ -79,76 +75,40 @@ overlap_increase_ratios = []
 print(f"Original Input: {tokenizer.decode(x_src[0], skip_special_tokens=True)}")
 # print(x_src)
 for t in range(1, x_src.shape[-1]):
-    x_src = x_src_old
-    best_loss = 100.0
+    best_overlap = 0.0
+    best_x = x_src.clone()
 
-    for i in range(num_iters):
-        with torch.no_grad():
-            out = model(x_src, output_hidden_states=True)
-        embeddings = out.hidden_states[0].clone().detach().requires_grad_(True)
-        lm_out = model(inputs_embeds=embeddings, output_hidden_states=True)
-        sae_out = sae.pre_acts(lm_out.hidden_states[layer_num + 1][0][-1])
-        loss = -cos_sim(sae_out, z_target)
-        gradients = torch.autograd.grad(outputs=loss, inputs=embeddings, create_graph=True)[0]
-        dot_prod = torch.matmul(gradients[0], model.get_input_embeddings().weight.T)
-        # print(dot_prod.shape)
-
-        cls_token_idx = tokenizer.encode('[CLS]')[1]
-        sep_token_idx = tokenizer.encode('[SEP]')[1]
-        dot_prod[:, cls_token_idx] = -float('inf')
-        dot_prod[:, sep_token_idx] = -float('inf')
-
-        # Get top k adversarial tokens
-        top_k_adv = (torch.topk(dot_prod, k).indices)[t]   
-        tokens_batch = []
-
-        for k_idx in range(k):
-            batch_item = x_src.clone().detach()
-            batch_item[0, t] = top_k_adv[k_idx]
-            tokens_batch.append(batch_item)
-
-        tokens_batch = torch.cat(tokens_batch, dim=0)
+    # Iterate through all tokens
+    vocab = tokenizer.get_vocab()
+    count = 0
+    for i, (token, token_id) in tqdm(enumerate(vocab.items())):
+        # print(f"Token: {token}, ID: {token_id}")
+        if not re.fullmatch(r"[a-zA-Z]+", token):
+            continue
+        adv_prompt_tokens = x_src.clone().detach()
+        adv_prompt_tokens[0, t] = token_id
 
         with torch.no_grad():
-            new_embeds = model(tokens_batch, output_hidden_states=True).hidden_states[0]
-            out = model(inputs_embeds=new_embeds, output_hidden_states=True).hidden_states[layer_num + 1]
-            out = sae.pre_acts(out[:, -1, :])
-        loss_batch = torch.tensor([-cos_sim(out[j], z_target) for j in range(out.shape[0])])
-        # best_indices = torch.argsort(loss_batch)[:num_candidates]
-        # candidate_idx = torch.randint(0, num_candidates, (1,))
-        # best_idx = best_indices[candidate_idx].item()
-        best_idx = torch.argmin(loss_batch)
-        if loss_batch[best_idx] < best_loss:
-            best_loss = loss_batch[best_idx]
-            best_similarity = -best_loss.item()
-            x_src = tokens_batch[best_idx].unsqueeze(0)
-        # corr = cos_sim(out[max_idx], latent_acts_target)
-        # similarities.append(-best_loss.item())
-        with torch.no_grad():
-            out = model(x_src, output_hidden_states=True)
-        top_idx_src = sae.encode(out.hidden_states[layer_num + 1][0][-1]).top_indices
-        num_overlap = count_common(top_idx_src, top_idx_target)
-        overlap = num_overlap / len(top_idx_target)
-        # overlaps.append(num_overlap)
-        # new_acts = sae.pre_acts(out.hidden_states[layer_num + 1][0][-1])
-        # num_agrees = torch.sum(torch.sign(new_acts == latent_acts_target))
-        # num_sign_agreements.append(num_agrees.item())
-        print(f"Iteration {i+1} similarity = {best_similarity}")    
-        print(f"Iteration {i+1} num_overlap = {num_overlap}, overlap_ratio={overlap}")   
-        # print(f"Iteration {i+1} num_sign_agreements = {num_agrees} out of {new_acts.shape[0]}")  
-        print(f"Iteration {i+1} input: {tokenizer.decode(x_src[0], skip_special_tokens=True)}")
-        print("--------------------")
-    print(f"Token {t} best similarity: {best_similarity}")
-    print(f"Token {t} best overlap: {overlap}")
-    overlap_increase = overlap - initial_overlap
+            lm_out = model(adv_prompt_tokens, output_hidden_states=True)
+            lm_h = lm_out.hidden_states[layer_num+1][0][-1] # (,hidden_dim)
+            top_idx_src = sae.encode(lm_h).top_indices
+            num_overlap = count_common(top_idx_src, top_idx_target)
+            overlap = num_overlap / len(top_idx_target)
+        if overlap > best_overlap:
+            best_overlap = overlap
+            best_x = adv_prompt_tokens
+
+    print(f"Token {t} best input: {tokenizer.decode(best_x[0], skip_special_tokens=True)}")
+    print(f"Token {t} best overlap: {best_overlap}")
+        
+    overlap_increase = best_overlap - initial_overlap
     overlap_increase_ratio = overlap_increase / initial_overlap
     print(f"Token {t} overlap increase: {overlap_increase}, {overlap_increase_ratio}")
-    similarities.append(best_similarity)
+    
     overlaps.append(overlap)
     overlap_increases.append(overlap_increase)
     overlap_increase_ratios.append(overlap_increase_ratio)
 
-print(f"All similarities: {similarities}")
 print(f"All overlaps: {overlaps}")
 print(f"All overlap increases: {overlap_increases}")
 print(f"All overlap increase ratios: {overlap_increase_ratios}")

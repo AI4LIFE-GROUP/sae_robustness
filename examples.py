@@ -51,7 +51,6 @@ out_tokens_0 = model.generate(
 out_tokens_1 = model.generate(
     seq_1['input_ids'],
     max_length=20,  # Maximum length of the generated text
-    temperature=0.0,
     do_sample=False,
     num_return_sequences=1,  # Number of sequences to generate
     no_repeat_ngram_size=2,  # To avoid repeating the same n-grams
