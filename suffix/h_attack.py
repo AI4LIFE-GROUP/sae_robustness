@@ -37,7 +37,7 @@ def count_common(x, y):
 attack_start_time = time.time()
 data_file = "./sae_samples_50.csv"
 df = pd.read_csv(data_file)
-sample_idx = 15
+sample_idx = 10
 layer_num = 25
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
