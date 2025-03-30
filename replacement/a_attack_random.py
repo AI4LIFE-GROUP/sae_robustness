@@ -37,8 +37,8 @@ def count_common(x, y):
 attack_start_time = time.time()
 data_file = "./sae_samples_50.csv"
 df = pd.read_csv(data_file)
-sample_idx = 40
-layer_num = 20
+sample_idx = 0
+layer_num = 25
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
@@ -58,7 +58,7 @@ z_src = sae.pre_acts(h_src)
 top_idx_src = sae.encode(h_src).top_indices
 
 num_iters = 7
-k = 200
+k = 500
 # batch_size = 1000
 
 x_src = torch.tensor(tokenizer.encode(src_text)).unsqueeze(0).to(DEVICE)

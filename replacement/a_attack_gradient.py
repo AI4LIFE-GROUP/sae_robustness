@@ -38,8 +38,8 @@ def count_common(x, y):
 attack_start_time = time.time()
 data_file = "./sae_samples_50.csv"
 df = pd.read_csv(data_file)
-sample_idx = 40
-layer_num = 20
+sample_idx = 24
+layer_num = 25
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
@@ -60,7 +60,7 @@ top_idx_src = sae.encode(h_src).top_indices
 top_acts_src = sae.encode(h_src).top_acts
 
 num_iters = 7
-k = 200
+k = 500
 
 x_src = torch.tensor(tokenizer.encode(src_text)).unsqueeze(0).to(DEVICE)
 x_src_old = x_src.clone()
@@ -119,7 +119,7 @@ for t in range(1, x_src.shape[-1]):
         if overlap_batch[best_idx] < best_overlap:
             best_overlap = overlap_batch[best_idx]
             # best_similarity = best_loss.item()
-            x_src = tokens_batch[best_idx].unsqueeze(0)
+        x_src = tokens_batch[best_idx].unsqueeze(0)
         current_acts = sae.encode(h_batch[best_idx, -1, :]).top_acts
         # print(f"current: {torch.sort(current_acts, descending=True)}")
         # print(f"src: {torch.sort(top_acts_src, descending=True)}")

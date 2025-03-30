@@ -36,11 +36,12 @@ def count_common(x, y):
     return num_common
 
 attack_start_time = time.time()
-data_file = "./sae_samples_50.csv"
+data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
-sample_idx = 40
+
+sample_idx = 80
 layer_num = 20
-neuron_idx = 100
+num_neurons = 10
 maximize = True
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
@@ -74,7 +75,7 @@ losses = []
 overlaps = []
 print(f"Original Input: {tokenizer.decode(x_src[0], skip_special_tokens=True)}")
 
-for t in range(1, x_src.shape[-1]):
+for t in range(1, x_src.shape[-1] - 1):
     x_src = x_src_old
     best_loss = float('inf')
     best_overlap = 1.0

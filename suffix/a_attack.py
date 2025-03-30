@@ -35,15 +35,15 @@ def count_common(x, y):
     return num_common
 
 attack_start_time = time.time()
-data_file = "./sae_samples_50.csv"
+data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
-sample_idx = 10
+sample_idx = 25
 layer_num = 25
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
-src_text = df.iloc[sample_idx]['x1']
-target_text = df.iloc[sample_idx]['x2']
+src_text = df.iloc[sample_idx]['x1'][:-1]
+target_text = df.iloc[sample_idx]['x2'][:-1]
 print(f"x1: {src_text}")
 print(f"x2: {target_text}")
 
@@ -66,9 +66,9 @@ top_acts_target = sae.encode(h_target).top_acts
 print(f"Initial overlap = {count_common(top_idx_src, top_idx_target) / len(top_idx_target)}")
 
 num_iters = 100
-k = 500
+k = 300
 num_adv = 5
-batch_size = 1400
+batch_size = 1000
 
 model.to(DEVICE)
 model.eval()
@@ -110,7 +110,6 @@ for i in range(num_iters):
     
     # Compute similarity loss
     loss = cos_sim(z1, z_target)
-    # loss = -torch.norm(z1 - z_target, p=1)
 
     # Calculate gradients for adversarial attack
     gradients = torch.autograd.grad(outputs=loss, inputs=embeddings, create_graph=True)[0]
@@ -152,7 +151,6 @@ for i in range(num_iters):
         best_overlap = overlap_batch[best_idx]
         best_x1 = x1
     best_loss = cos_sim(z1_batch[best_idx], z_target).item()
-    # best_loss = torch.norm(z1_batch[best_idx] - z_target, p=1).item()
     x1_text = tokenizer.decode(x1[0], skip_special_tokens=True)
     losses.append(best_loss)
     overlaps.append(best_overlap.item())
