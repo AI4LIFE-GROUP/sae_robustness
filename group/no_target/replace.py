@@ -39,7 +39,7 @@ attack_start_time = time.time()
 data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
 sample_idx = 24
-layer_num = 25
+layer_num = 10
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
