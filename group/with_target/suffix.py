@@ -148,7 +148,7 @@ for i in range(num_iters):
     
     best_idx = torch.argmax(overlap_batch)
     x1 = x1_batch[best_idx].unsqueeze(0)
-    print(f"best idx = {best_idx}")
+    # print(f"best idx = {best_idx}")
     if overlap_batch[best_idx] > best_overlap:
         best_overlap = overlap_batch[best_idx]
         best_x1 = x1[0][:x1_init.shape[-1]]
