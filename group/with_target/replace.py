@@ -38,11 +38,11 @@ def count_common(x, y):
 attack_start_time = time.time()
 data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
-sample_idx = 20
+sample_idx = 83
 layer_num = 20
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B", cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/")
 x1_raw_text = df.iloc[sample_idx]['x1'][:-1]
 x2_raw_text = df.iloc[sample_idx]['x2'][:-1]
 print(f"x1: {x1_raw_text}")
@@ -56,7 +56,7 @@ x2_raw_processed = tokenizer(x2_raw_text + " \nThe previous text is about", retu
 model = LlamaForCausalLM.from_pretrained("meta-llama/Meta-Llama-3-8B", cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/").to(DEVICE)
 model.config.pad_token_id = model.config.eos_token_id
 
-num_iters = 10
+num_iters = 5
 k = 800
 batch_size = 500
 
