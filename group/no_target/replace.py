@@ -42,7 +42,7 @@ sample_idx = 24
 layer_num = 10
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
-tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B")
+tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B", cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/")
 x1_raw_text = df.iloc[sample_idx]['x1'][:-1]
 print(f"x1: {x1_raw_text}")
 
