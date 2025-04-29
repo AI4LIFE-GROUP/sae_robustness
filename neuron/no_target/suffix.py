@@ -42,6 +42,9 @@ activate = False
 num_selected = 10
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
+log_file_path = f"./results/llama3-8b-generated/layer-20/untargeted-individual-suffix-{sample_idx}-{activate}.txt"  # You can change this filename
+sys.stdout = open(log_file_path, "w")
+
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B", cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/")
 x1_raw_text = df.iloc[sample_idx]['x1'][:-1]
 print(f"x1: {x1_raw_text}")
@@ -58,7 +61,7 @@ z1_signed = sae.encoder(h1_raw)
 s1_raw = sae.encode(h1_raw).top_indices
 s1_raw_acts = sae.encode(h1_raw).top_acts
 
-num_iters = 10
+num_iters = 8
 k = 300
 num_adv = 1
 batch_size = 100
@@ -210,3 +213,4 @@ for n_id in neuron_list:
 print(f"Successful rate = {success_count / len(neuron_list)}")
 print(f"All final ranks = {all_final_ranks}")
 
+sys.stdout.close()
