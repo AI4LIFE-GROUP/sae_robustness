@@ -38,9 +38,12 @@ def count_common(x, y):
 attack_start_time = time.time()
 data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
-sample_idx = 24
+sample_idx = 20
 layer_num = 10
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
+
+log_file_path = f"./results/llama3-8b-generated/layer-20/untargeted-population-replace-{sample_idx}.txt"  # You can change this filename
+sys.stdout = open(log_file_path, "w")
 
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B", cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/")
 x1_raw_text = df.iloc[sample_idx]['x1'][:-1]
@@ -128,6 +131,7 @@ for t in range(1, x1_raw.shape[-1]):
         print(f"Iteration {i+1} overlap_ratio={best_overlap}")   
         print(f"Iteration {i+1} input: {tokenizer.decode(x1[0][:x1_raw.shape[-1]], skip_special_tokens=True)}")
         print("--------------------")
+        torch.cuda.empty_cache()
     print(f"Token {t} best loss: {best_loss}")
     print(f"Token {t} best overlap: {best_overlap}")
 
@@ -137,6 +141,13 @@ for t in range(1, x1_raw.shape[-1]):
 attack_time = time.time() - attack_start_time
 print(f"Total attack time: {attack_time:.2f} seconds")
 
+# output_file = f"./results/llama3-8b-generated/layer-20/untargeted-population-replace-{sample_idx}.txt"
+# with open(output_file, "w") as f:
+#     f.write(f"Losses across locations:\n{losses}\n\n")
+#     f.write(f"Overlaps across locations:\n{overlaps}\n\n")
+#     f.write(f"Mean overlaps = {sum(overlaps) / len(overlaps)}\n")
 print(f"All losses: {losses}")
 print(f"All overlaps: {overlaps}")
 print(f"Mean overlaps = {sum(overlaps) / len(overlaps)}")
+
+sys.stdout.close()

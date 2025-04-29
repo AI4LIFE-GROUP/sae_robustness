@@ -15,8 +15,6 @@ from torch import nn, Tensor
 from huggingface_hub import hf_hub_download, login
 import transformers
 
-print(transformers.__version__)
-
 login(token="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")
 
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -118,10 +116,6 @@ def launch_attack(args):
         sorted, indices = torch.sort(z1_raw, descending=True)
         s1_raw = indices[:num_top]
         s1_raw_acts = sorted[:num_top]
-        print(f"z1_raw: {indices[:50]}")
-        print(f"z1_raw: {sorted[:50]}")
-        # s1_raw = torch.nonzero(z1_raw > 0, as_tuple=True)[0]
-        # s1_raw_acts = z1_raw[s1_raw]
 
     h2 = model(x2_raw_processed, output_hidden_states=True).hidden_states[layer_num + 1][0][-1]
     if args.model_type == "llama3":
@@ -131,8 +125,6 @@ def launch_attack(args):
     elif args.model_type == "gemma2-2b" or args.model_type == "gemma2-9b":
         z2 = jump_relu(h2 @ W_enc + b_enc, theta)
         sorted, indices = torch.sort(z2, descending=True)
-        print(f"z2: {indices[:50]}")
-        print(f"z2: {sorted[:50]}")
         s2 = indices[:num_top]
         s2_acts = sorted[:num_top]
         # s2 = torch.nonzero(z2 > 0, as_tuple=True)[0]
@@ -181,8 +173,6 @@ def launch_attack(args):
         sorted, indices = torch.sort(z1, descending=True)
         s1 = indices[:num_top]
         s1_acts = sorted[:num_top]
-        print(f"z1: {indices[:50]}")
-        print(f"z1: {sorted[:50]}")
         
     print(f"s1 s2 overlap = {count_common(s1, s2) / len(s2)}")
     x1 = x1_init_processed
@@ -226,30 +216,27 @@ def launch_attack(args):
         x1_batch[:, x1_init.shape[-1] - num_adv:x1_init.shape[-1]][batch_indices, random_idx] = top_k_adv[random_idx, random_top_k_idx]
 
         with torch.no_grad():
-            new_embeds = model(x1_batch, output_hidden_states=True).hidden_states[0]
-            h1_batch = model(inputs_embeds=new_embeds, output_hidden_states=True).hidden_states[layer_num + 1]
+            # new_embeds = model(x1_batch, output_hidden_states=True).hidden_states[0]
+            # h1_batch = model(inputs_embeds=new_embeds, output_hidden_states=True).hidden_states[layer_num + 1]
             if args.model_type == "llama3":
+                new_embeds = model(x1_batch, output_hidden_states=True).hidden_states[0]
+                h1_batch = model(inputs_embeds=new_embeds, output_hidden_states=True).hidden_states[layer_num + 1]
                 z1_batch = sae.pre_acts(h1_batch[:, -1, :])
                 s1_batch = sae.encode(h1_batch[:, -1, :]).top_indices # (k, num_topk=192)
             elif args.model_type == "gemma2-2b" or args.model_type == "gemma2-9b":
                 # z1_batch = nn.functional.relu(h1_batch[:, -1, :] @ sae.W_enc + sae.b_enc)
+                h1_batch = model(x1_batch, output_hidden_states=True).hidden_states[layer_num + 1]
                 z1_batch = jump_relu(h1_batch[:, -1, :] @ W_enc + b_enc, theta)
                 sorted, indices = torch.sort(z1_batch, dim=-1, descending=True)
+                # print(f"z1_batch_sorted: {sorted[:5, :10]}")
                 s1_batch = indices[:, :num_top]
                 s1_acts_batch = sorted[:, :num_top]
-                # s1_batch = []
-                # for b in range(z1_batch.size(0)):
-                #     s1 = torch.nonzero(z1_batch[b] > 0, as_tuple=True)[0]
-                #     s1_batch.append(s1)
-                # print(s1_batch)
-        # s1_batch = sae.encode(h1_batch[:, -1, :]).top_indices # (k, num_topk=192)
+                
         overlap_batch = torch.tensor([count_common(s1_batch[j], s2) / len(s2) for j in range(s1_batch.shape[0])])
-        
         best_idx = torch.argmax(overlap_batch)
-        print(f"s1_batch best: {s1_batch[best_idx][:50]}")
-        print(f"s1_acts_batch best: {s1_acts_batch[best_idx][:50]}")
+        
         x1 = x1_batch[best_idx].unsqueeze(0)
-        # print(f"best idx = {best_idx}")
+
         if overlap_batch[best_idx] > best_overlap:
             best_overlap = overlap_batch[best_idx]
             best_x1 = x1[0][:x1_init.shape[-1]]

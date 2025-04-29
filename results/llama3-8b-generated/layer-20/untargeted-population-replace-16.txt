@@ -1,0 +1,114 @@
+x1: Feminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+Iteration 1 loss = 0.8029294013977051
+Iteration 1 overlap_ratio=0.53125
+Iteration 1 input:  bağlantıeminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 2 loss = 0.6734644174575806
+Iteration 2 overlap_ratio=0.3802083432674408
+Iteration 2 input:  /**
+eminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 3 loss = 0.6310574412345886
+Iteration 3 overlap_ratio=0.3697916567325592
+Iteration 3 input:  Pdfeminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 4 loss = 0.7021796107292175
+Iteration 4 overlap_ratio=0.3697916567325592
+Iteration 4 input: ."""
+
+eminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 5 loss = 0.780936062335968
+Iteration 5 overlap_ratio=0.3697916567325592
+Iteration 5 input:  StatefulWidgeteminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 6 loss = 0.6290556788444519
+Iteration 6 overlap_ratio=0.3541666567325592
+Iteration 6 input:  PropelExceptioneminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 7 loss = 0.6588925719261169
+Iteration 7 overlap_ratio=0.3541666567325592
+Iteration 7 input:  […]
+
+eminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 8 loss = 0.6734644174575806
+Iteration 8 overlap_ratio=0.3541666567325592
+Iteration 8 input:  /**
+eminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 9 loss = 0.6310574412345886
+Iteration 9 overlap_ratio=0.3541666567325592
+Iteration 9 input:  Pdfeminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 10 loss = 0.7021796107292175
+Iteration 10 overlap_ratio=0.3541666567325592
+Iteration 10 input: ."""
+
+eminist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Token 1 best loss: 0.7021796107292175
+Token 1 best overlap: 0.3541666567325592
+Iteration 1 loss = 0.7748511433601379
+Iteration 1 overlap_ratio=0.4791666567325592
+Iteration 1 input: F(IConfigurationist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 2 loss = 0.6218338012695312
+Iteration 2 overlap_ratio=0.328125
+Iteration 2 input: F=['ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 3 loss = 0.5207222700119019
+Iteration 3 overlap_ratio=0.3020833432674408
+Iteration 3 input: F?keyist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 4 loss = 0.6441762447357178
+Iteration 4 overlap_ratio=0.3020833432674408
+Iteration 4 input: F наличииist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 5 loss = 0.8389194011688232
+Iteration 5 overlap_ratio=0.3020833432674408
+Iteration 5 input: F得到ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 6 loss = 0.6851189732551575
+Iteration 6 overlap_ratio=0.3020833432674408
+Iteration 6 input: F，不过ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 7 loss = 0.6990494132041931
+Iteration 7 overlap_ratio=0.3020833432674408
+Iteration 7 input: F]="ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 8 loss = 0.5860708355903625
+Iteration 8 overlap_ratio=0.3020833432674408
+Iteration 8 input: F=["ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 9 loss = 0.612500786781311
+Iteration 9 overlap_ratio=0.3020833432674408
+Iteration 9 input: F }}</ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 10 loss = 0.6851189732551575
+Iteration 10 overlap_ratio=0.3020833432674408
+Iteration 10 input: F，不过ist theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Token 2 best loss: 0.6851189732551575
+Token 2 best overlap: 0.3020833432674408
+Iteration 1 loss = 0.8463200330734253
+Iteration 1 overlap_ratio=0.625
+Iteration 1 input: Feminоюз theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 2 loss = 0.8335931301116943
+Iteration 2 overlap_ratio=0.5989583134651184
+Iteration 2 input: Femin станет theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 3 loss = 0.8617777228355408
+Iteration 3 overlap_ratio=0.5833333134651184
+Iteration 3 input: Femin/**************************************** theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 4 loss = 0.6667551398277283
+Iteration 4 overlap_ratio=0.4270833432674408
+Iteration 4 input: Femin }}</ theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------
+Iteration 5 loss = 0.7598981261253357
+Iteration 5 overlap_ratio=0.4270833432674408
+Iteration 5 input: Femin。",
+ theory interrogates patriarchal assumptions embedded in language, media, institutions, and historical narratives across disciplines
+--------------------

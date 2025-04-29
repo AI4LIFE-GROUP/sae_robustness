@@ -42,6 +42,10 @@ activate = False
 num_selected = 10
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
+# Create a log file and redirect all prints to it
+log_file_path = f"./results/llama3-8b-generated/layer-20/untargeted-individual-replace-{sample_idx}-{activate}.txt"  # You can change this filename
+sys.stdout = open(log_file_path, "w")
+
 tokenizer = AutoTokenizer.from_pretrained("meta-llama/Meta-Llama-3-8B", cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/")
 x1_raw_text = df.iloc[sample_idx]['x1'][:-1]
 print(f"x1: {x1_raw_text}")
@@ -59,8 +63,8 @@ s1_raw = sae.encode(h1_raw).top_indices
 s1_raw_acts = sae.encode(h1_raw).top_acts
 
 num_iters = 10
-k = 300
-batch_size = 100
+k = 200
+batch_size = 80
 
 model.to(DEVICE)
 model.eval()
@@ -163,15 +167,16 @@ for t in range(1, x1_raw.shape[-1]):
 
             x1 = x1_batch[best_idx].unsqueeze(0)
             if (activate and rank_per_sample[best_idx] < best_rank) or (not activate and rank_per_sample[best_idx] > best_rank):
-                best_rank = rank_per_sample[best_idx]
+                best_rank = rank_per_sample[best_idx].item()
             best_loss = torch.nn.functional.log_softmax(z1_batch[best_idx])[n_id].item()
             x1_text = tokenizer.decode(x1[0][:x1_raw.shape[-1]], skip_special_tokens=True)
             losses.append(best_loss)
-            ranks.append(best_rank.item())
+            ranks.append(best_rank)
 
             print(f"Iteration {i+1} loss = {best_loss}")
             print(f"Iteration {i+1} best rank = {best_rank}")
             print(f"Iteration {i+1} input text: {x1_text}")
+            torch.cuda.empty_cache()
             if activate and best_rank < len(s1):
                 print(f"Token {t} Neuron {n_id} successfully activated!")
                 print("--------------------")
@@ -189,9 +194,10 @@ for t in range(1, x1_raw.shape[-1]):
         if not activate and best_rank < len(s1):
             print(f"Token {t} Neuron {n_id} cannot be deactivated")
             print("--------------------")
-        all_final_ranks.append(best_rank.item())
+        all_final_ranks.append(best_rank)
         print(f"Token {t}, {success_count} out of {count} attacks are successful!")
 
     print(f"Token {t} Successful rate = {success_count / len(neuron_list)}")
     print(f"Token {t} All final ranks = {all_final_ranks}")
 
+sys.stdout.close()

@@ -1,0 +1,16 @@
+x1: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 1 loss = -9.83495807647705
+Iteration 1 best rank = 1
+Iteration 1 input text: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances�
+Iteration 2 loss = -9.862248420715332
+Iteration 2 best rank = 1
+Iteration 2 input text: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances�
+Iteration 3 loss = -9.72938060760498
+Iteration 3 best rank = 1
+Iteration 3 input text: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances çarp
+Iteration 4 loss = -9.786746978759766
+Iteration 4 best rank = 1
+Iteration 4 input text: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performancesNetflix
+Iteration 5 loss = -9.239383697509766
+Iteration 5 best rank = 1
+Iteration 5 input text: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances terrible

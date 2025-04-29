@@ -36,9 +36,9 @@ def count_common(x, y):
 
 data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
-sample_idx = 20
+sample_idx = 41
 layer_num = 20
-activate = True
+activate = False
 num_selected = 10
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 

@@ -58,8 +58,8 @@ W_enc = pt_params['W_enc']
 b_enc = pt_params['b_enc']
 theta = pt_params['threshold']
 
-x1_text = "Her thesis analyzes representations of trauma and silence in Holocaust literature across multiple national contexts"
-x2_text = "Neuroplasticity refers to the brain’s ability to rewire itself in response to learning, injury, or environmental change"
+x1_text = "input text: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances.\n\n examined"
+x2_text = "Encryption secures sensitive digital communication by converting readable data into unreadable ciphertext"
 
 x1 = tokenizer(x1_text + " \nThe previous text is about", return_tensors="pt")['input_ids'].to(DEVICE)
 x2 = tokenizer(x2_text + " \nThe previous text is about", return_tensors="pt")['input_ids'].to(DEVICE)

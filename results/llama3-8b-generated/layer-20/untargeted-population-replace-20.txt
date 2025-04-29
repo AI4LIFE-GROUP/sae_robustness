@@ -1,0 +1,475 @@
+x1: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 1 loss = 0.6598449349403381
+Iteration 1 overlap_ratio=0.4114583432674408
+Iteration 1 input: :
+
+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.7495697736740112
+Iteration 2 overlap_ratio=0.4114583432674408
+Iteration 2 input: ="./ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.5935314297676086
+Iteration 3 overlap_ratio=0.3645833432674408
+Iteration 3 input: =[" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.6934030652046204
+Iteration 4 overlap_ratio=0.3645833432674408
+Iteration 4 input:  [(" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.5935314297676086
+Iteration 5 overlap_ratio=0.3645833432674408
+Iteration 5 input: =[" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.6934030652046204
+Iteration 6 overlap_ratio=0.3645833432674408
+Iteration 6 input:  [(" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.5935314297676086
+Iteration 7 overlap_ratio=0.3645833432674408
+Iteration 7 input: =[" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.6934030652046204
+Iteration 8 overlap_ratio=0.3645833432674408
+Iteration 8 input:  [(" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.5935314297676086
+Iteration 9 overlap_ratio=0.3645833432674408
+Iteration 9 input: =[" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.6934030652046204
+Iteration 10 overlap_ratio=0.3645833432674408
+Iteration 10 input:  [(" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 1 best loss: 0.6934030652046204
+Token 1 best overlap: 0.3645833432674408
+Iteration 1 loss = 0.8078532814979553
+Iteration 1 overlap_ratio=0.515625
+Iteration 1 input: The/temp explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.6680268049240112
+Iteration 2 overlap_ratio=0.3802083432674408
+Iteration 2 input: The chapter explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.7707003355026245
+Iteration 3 overlap_ratio=0.3802083432674408
+Iteration 3 input: The настоя explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.5742517113685608
+Iteration 4 overlap_ratio=0.2864583432674408
+Iteration 4 input: The Previous explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.6452988386154175
+Iteration 5 overlap_ratio=0.2864583432674408
+Iteration 5 input: The_abstract explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.7440648078918457
+Iteration 6 overlap_ratio=0.2864583432674408
+Iteration 6 input: TheEObject explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.643689751625061
+Iteration 7 overlap_ratio=0.2864583432674408
+Iteration 7 input: The(pkg explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.7199037671089172
+Iteration 8 overlap_ratio=0.2864583432674408
+Iteration 8 input: The.article explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.6908918619155884
+Iteration 9 overlap_ratio=0.2864583432674408
+Iteration 9 input: The(txt explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.5650051236152649
+Iteration 10 overlap_ratio=0.2864583432674408
+Iteration 10 input: The text explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 2 best loss: 0.5650051236152649
+Token 2 best overlap: 0.2864583432674408
+Iteration 1 loss = 0.7551647424697876
+Iteration 1 overlap_ratio=0.5
+Iteration 1 input: The filmlodash love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.7759037613868713
+Iteration 2 overlap_ratio=0.484375
+Iteration 2 input: The film booklet love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.7783483862876892
+Iteration 3 overlap_ratio=0.484375
+Iteration 3 input: The filmergic love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.7410888671875
+Iteration 4 overlap_ratio=0.484375
+Iteration 4 input: The filmKeyword love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.7472464442253113
+Iteration 5 overlap_ratio=0.4635416567325592
+Iteration 5 input: The film cursor love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.662973165512085
+Iteration 6 overlap_ratio=0.4166666567325592
+Iteration 6 input: The film‌پدیای love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.8143760561943054
+Iteration 7 overlap_ratio=0.4166666567325592
+Iteration 7 input: The filmická love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.7857987284660339
+Iteration 8 overlap_ratio=0.4166666567325592
+Iteration 8 input: The film český love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.7752072215080261
+Iteration 9 overlap_ratio=0.4166666567325592
+Iteration 9 input: The film blog love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.7973521947860718
+Iteration 10 overlap_ratio=0.4166666567325592
+Iteration 10 input: The film/wp love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 3 best loss: 0.7973521947860718
+Token 3 best overlap: 0.4166666567325592
+Iteration 1 loss = 0.6768661141395569
+Iteration 1 overlap_ratio=0.4166666567325592
+Iteration 1 input: The film explores ]
+
+ and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.6061534881591797
+Iteration 2 overlap_ratio=0.3333333432674408
+Iteration 2 input: The film explores _____ and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.5347920656204224
+Iteration 3 overlap_ratio=0.3020833432674408
+Iteration 3 input: The film explores ------- and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.5618515610694885
+Iteration 4 overlap_ratio=0.2916666567325592
+Iteration 4 input: The film explores """
+
+ and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.7296987175941467
+Iteration 5 overlap_ratio=0.2916666567325592
+Iteration 5 input: The film explores 출장 and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.7857206463813782
+Iteration 6 overlap_ratio=0.2916666567325592
+Iteration 6 input: The film explores 하면 and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.826972484588623
+Iteration 7 overlap_ratio=0.2916666567325592
+Iteration 7 input: The film exploresNetflix and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.7136934995651245
+Iteration 8 overlap_ratio=0.2916666567325592
+Iteration 8 input: The film explores tolik and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.7940243482589722
+Iteration 9 overlap_ratio=0.2916666567325592
+Iteration 9 input: The film explores이를 and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.6365002393722534
+Iteration 10 overlap_ratio=0.2916666567325592
+Iteration 10 input: The film explores출장마사지 and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 4 best loss: 0.6365002393722534
+Token 4 best overlap: 0.2916666567325592
+Iteration 1 loss = 0.7990423440933228
+Iteration 1 overlap_ratio=0.5572916865348816
+Iteration 1 input: The film explores love澳 trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.6227477192878723
+Iteration 2 overlap_ratio=0.3697916567325592
+Iteration 2 input: The film explores love사이트 trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.7682826519012451
+Iteration 3 overlap_ratio=0.3697916567325592
+Iteration 3 input: The film explores love epub trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.7259120345115662
+Iteration 4 overlap_ratio=0.3697916567325592
+Iteration 4 input: The film explores love"Now trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.7935808300971985
+Iteration 5 overlap_ratio=0.3697916567325592
+Iteration 5 input: The film explores love/*================================================================ trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.6577113270759583
+Iteration 6 overlap_ratio=0.3697916567325592
+Iteration 6 input: The film explores love	HashMap trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.6499510407447815
+Iteration 7 overlap_ratio=0.3697916567325592
+Iteration 7 input: The film explores love """
+
+ trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.77089923620224
+Iteration 8 overlap_ratio=0.3697916567325592
+Iteration 8 input: The film explores loveJsonProperty trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.7740766406059265
+Iteration 9 overlap_ratio=0.3697916567325592
+Iteration 9 input: The film explores love/******************************************************************************** trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.6114171147346497
+Iteration 10 overlap_ratio=0.3385416567325592
+Iteration 10 input: The film explores love '">' trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 5 best loss: 0.6114171147346497
+Token 5 best overlap: 0.3385416567325592
+Iteration 1 loss = 0.8339351415634155
+Iteration 1 overlap_ratio=0.5833333134651184
+Iteration 1 input: The film explores love and622 through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.7437959909439087
+Iteration 2 overlap_ratio=0.4895833432674408
+Iteration 2 input: The film explores love and嘴 through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.6733014583587646
+Iteration 3 overlap_ratio=0.421875
+Iteration 3 input: The film explores love and上海 through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.7184392213821411
+Iteration 4 overlap_ratio=0.421875
+Iteration 4 input: The film explores love and.Servlet through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.7303116917610168
+Iteration 5 overlap_ratio=0.421875
+Iteration 5 input: The film explores love and}.${ through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.6506149768829346
+Iteration 6 overlap_ratio=0.34375
+Iteration 6 input: The film explores love and ['./ through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.619498610496521
+Iteration 7 overlap_ratio=0.34375
+Iteration 7 input: The film explores love and {: through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.6897547245025635
+Iteration 8 overlap_ratio=0.34375
+Iteration 8 input: The film explores love and 먹 through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.7442221641540527
+Iteration 9 overlap_ratio=0.34375
+Iteration 9 input: The film explores love and.btn through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.6897547245025635
+Iteration 10 overlap_ratio=0.34375
+Iteration 10 input: The film explores love and 먹 through non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 6 best loss: 0.6897547245025635
+Token 6 best overlap: 0.34375
+Iteration 1 loss = 0.713877260684967
+Iteration 1 overlap_ratio=0.46875
+Iteration 1 input: The film explores love and trauma"""
+
+
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.6992207169532776
+Iteration 2 overlap_ratio=0.4322916567325592
+Iteration 2 input: The film explores love and trauma"?
+
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.628883957862854
+Iteration 3 overlap_ratio=0.359375
+Iteration 3 input: The film explores love and trauma _____ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.7688261270523071
+Iteration 4 overlap_ratio=0.359375
+Iteration 4 input: The film explores love and traumaeterangan non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.8674835562705994
+Iteration 5 overlap_ratio=0.359375
+Iteration 5 input: The film explores love and trauma//////////////////////////////////////////////////////////////////// non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.6488661766052246
+Iteration 6 overlap_ratio=0.359375
+Iteration 6 input: The film explores love and trauma"""
+
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.6331828832626343
+Iteration 7 overlap_ratio=0.359375
+Iteration 7 input: The film explores love and trauma)")
+
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.6484078764915466
+Iteration 8 overlap_ratio=0.359375
+Iteration 8 input: The film explores love and trauma>";
+
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.7131994962692261
+Iteration 9 overlap_ratio=0.359375
+Iteration 9 input: The film explores love and trauma"))
+
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.6767746210098267
+Iteration 10 overlap_ratio=0.359375
+Iteration 10 input: The film explores love and trauma""")
+ non-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 7 best loss: 0.6767746210098267
+Token 7 best overlap: 0.359375
+Iteration 1 loss = 0.7712141275405884
+Iteration 1 overlap_ratio=0.5052083134651184
+Iteration 1 input: The film explores love and trauma through�-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.677219033241272
+Iteration 2 overlap_ratio=0.421875
+Iteration 2 input: The film explores love and trauma through카지노-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.7974042892456055
+Iteration 3 overlap_ratio=0.421875
+Iteration 3 input: The film explores love and trauma throughusercontent-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.6495283842086792
+Iteration 4 overlap_ratio=0.390625
+Iteration 4 input: The film explores love and trauma through:@"-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.7431344389915466
+Iteration 5 overlap_ratio=0.390625
+Iteration 5 input: The film explores love and trauma through::
+
+-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.6256760358810425
+Iteration 6 overlap_ratio=0.375
+Iteration 6 input: The film explores love and trauma through>";
+
+-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.6389530897140503
+Iteration 7 overlap_ratio=0.3489583432674408
+Iteration 7 input: The film explores love and trauma through ]);
+
+-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.6812170743942261
+Iteration 8 overlap_ratio=0.3489583432674408
+Iteration 8 input: The film explores love and trauma through.*?)-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.6495283842086792
+Iteration 9 overlap_ratio=0.3489583432674408
+Iteration 9 input: The film explores love and trauma through:@"-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.7431344389915466
+Iteration 10 overlap_ratio=0.3489583432674408
+Iteration 10 input: The film explores love and trauma through::
+
+-linear storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 8 best loss: 0.7431344389915466
+Token 8 best overlap: 0.3489583432674408
+Iteration 1 loss = 0.84646075963974
+Iteration 1 overlap_ratio=0.6614583134651184
+Iteration 1 input: The film explores love and trauma through non从 storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.7393644452095032
+Iteration 2 overlap_ratio=0.46875
+Iteration 2 input: The film explores love and trauma through non 投稿日 storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.636649489402771
+Iteration 3 overlap_ratio=0.359375
+Iteration 3 input: The film explores love and trauma through non "") storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.6905087828636169
+Iteration 4 overlap_ratio=0.359375
+Iteration 4 input: The film explores love and trauma through non ''' storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.5188847780227661
+Iteration 5 overlap_ratio=0.2708333432674408
+Iteration 5 input: The film explores love and trauma through non }}</ storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.6133390665054321
+Iteration 6 overlap_ratio=0.2708333432674408
+Iteration 6 input: The film explores love and trauma through non.TryGetValue storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.6117566227912903
+Iteration 7 overlap_ratio=0.2708333432674408
+Iteration 7 input: The film explores love and trauma through non출장 storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.5822529196739197
+Iteration 8 overlap_ratio=0.2708333432674408
+Iteration 8 input: The film explores love and trauma through non(jPanel storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.6627165079116821
+Iteration 9 overlap_ratio=0.2708333432674408
+Iteration 9 input: The film explores love and trauma through non카지노 storytelling, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.7827619314193726
+Iteration 10 overlap_ratio=0.2708333432674408
+Iteration 10 input: The film explores love and trauma through non Kathleen storytelling, blending magical realism with emotionally raw performances
+--------------------
+Token 9 best loss: 0.7827619314193726
+Token 9 best overlap: 0.2708333432674408
+Iteration 1 loss = 0.8398357629776001
+Iteration 1 overlap_ratio=0.5572916865348816
+Iteration 1 input: The film explores love and trauma through non-linear(text, blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.6311556100845337
+Iteration 2 overlap_ratio=0.3802083432674408
+Iteration 2 input: The film explores love and trauma through non-linear."""
+
+, blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.6997382640838623
+Iteration 3 overlap_ratio=0.3802083432674408
+Iteration 3 input: The film explores love and trauma through non-linear}`);
+, blending magical realism with emotionally raw performances
+--------------------
+Iteration 4 loss = 0.7565491795539856
+Iteration 4 overlap_ratio=0.3802083432674408
+Iteration 4 input: The film explores love and trauma through non-linear.ModelAdmin, blending magical realism with emotionally raw performances
+--------------------
+Iteration 5 loss = 0.62309730052948
+Iteration 5 overlap_ratio=0.3802083432674408
+Iteration 5 input: The film explores love and trauma through non-linear […]
+
+, blending magical realism with emotionally raw performances
+--------------------
+Iteration 6 loss = 0.531221330165863
+Iteration 6 overlap_ratio=0.296875
+Iteration 6 input: The film explores love and trauma through non-linear--------
+
+, blending magical realism with emotionally raw performances
+--------------------
+Iteration 7 loss = 0.7016522884368896
+Iteration 7 overlap_ratio=0.296875
+Iteration 7 input: The film explores love and trauma through non-linear -------------, blending magical realism with emotionally raw performances
+--------------------
+Iteration 8 loss = 0.7838723659515381
+Iteration 8 overlap_ratio=0.296875
+Iteration 8 input: The film explores love and trauma through non-linear②, blending magical realism with emotionally raw performances
+--------------------
+Iteration 9 loss = 0.7179440855979919
+Iteration 9 overlap_ratio=0.296875
+Iteration 9 input: The film explores love and trauma through non-linear，都, blending magical realism with emotionally raw performances
+--------------------
+Iteration 10 loss = 0.785957932472229
+Iteration 10 overlap_ratio=0.296875
+Iteration 10 input: The film explores love and trauma through non-linear]];
+, blending magical realism with emotionally raw performances
+--------------------
+Token 10 best loss: 0.785957932472229
+Token 10 best overlap: 0.296875
+Iteration 1 loss = 0.7451310753822327
+Iteration 1 overlap_ratio=0.4479166567325592
+Iteration 1 input: The film explores love and trauma through non-linear storytelling	templateUrl blending magical realism with emotionally raw performances
+--------------------
+Iteration 2 loss = 0.7217962741851807
+Iteration 2 overlap_ratio=0.4479166567325592
+Iteration 2 input: The film explores love and trauma through non-linear storytelling [];
+
+ blending magical realism with emotionally raw performances
+--------------------
+Iteration 3 loss = 0.6366050839424133
+Iteration 3 overlap_ratio=0.3802083432674408
+Iteration 3 input: The film explores love and trauma through non-linear storytelling}")
+
+ blending magical realism with emotionally raw performances
+--------------------

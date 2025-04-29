@@ -1,0 +1,480 @@
+x1: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 1 loss = -9.520145416259766
+Iteration 1 best rank = 2
+Iteration 1 input text:  많은 film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -9.589309692382812
+Iteration 2 best rank = 2
+Iteration 2 input text:  although film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -9.504072189331055
+Iteration 3 best rank = 2
+Iteration 3 input text:  nowadays film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -9.438872337341309
+Iteration 4 best rank = 2
+Iteration 4 input text:  Brilliant film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -9.482592582702637
+Iteration 5 best rank = 2
+Iteration 5 input text:  EVERY film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -9.540777206420898
+Iteration 6 best rank = 2
+Iteration 6 input text:  Daniels film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -9.540777206420898
+Iteration 7 best rank = 2
+Iteration 7 input text:  Daniels film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -9.540777206420898
+Iteration 8 best rank = 2
+Iteration 8 input text:  Daniels film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -9.540777206420898
+Iteration 9 best rank = 2
+Iteration 9 input text:  Daniels film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -9.540777206420898
+Iteration 10 best rank = 2
+Iteration 10 input text:  Daniels film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 45240 cannot be deactivated
+--------------------
+Token 1, 0 out of 1 attacks are successful!
+Iteration 1 loss = -11.073385238647461
+Iteration 1 best rank = 18
+Iteration 1 input text: SU film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.473466873168945
+Iteration 2 best rank = 104
+Iteration 2 input text: ตอบ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.247719764709473
+Iteration 3 best rank = 104
+Iteration 3 input text: fluid film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.371919631958008
+Iteration 4 best rank = 104
+Iteration 4 input text:  lipid film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.969230651855469
+Iteration 5 best rank = 104
+Iteration 5 input text: bound film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.173334121704102
+Iteration 6 best rank = 104
+Iteration 6 input text: portlet film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.329553604125977
+Iteration 7 best rank = 104
+Iteration 7 input text:  Qualcomm film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.454587936401367
+Iteration 8 best rank = 104
+Iteration 8 input text:  Nokia film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.342754364013672
+Iteration 9 best rank = 104
+Iteration 9 input text: @SpringBootApplication film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.30903434753418
+Iteration 10 best rank = 104
+Iteration 10 input text: 	assertEquals film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 55666 cannot be deactivated
+--------------------
+Token 1, 0 out of 2 attacks are successful!
+Iteration 1 loss = -10.211647033691406
+Iteration 1 best rank = 4
+Iteration 1 input text:  eminent film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.07028579711914
+Iteration 2 best rank = 4
+Iteration 2 input text:  initially film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.13192367553711
+Iteration 3 best rank = 6
+Iteration 3 input text:  Swedish film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.178524017333984
+Iteration 4 best rank = 6
+Iteration 4 input text:  Classics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.571131706237793
+Iteration 5 best rank = 6
+Iteration 5 input text:  Abrams film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -10.367268562316895
+Iteration 6 best rank = 6
+Iteration 6 input text:  unforgettable film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -10.205660820007324
+Iteration 7 best rank = 6
+Iteration 7 input text:  badly film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -9.991718292236328
+Iteration 8 best rank = 6
+Iteration 8 input text:  Colombian film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -9.991718292236328
+Iteration 9 best rank = 6
+Iteration 9 input text:  Colombian film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -9.991718292236328
+Iteration 10 best rank = 6
+Iteration 10 input text:  Colombian film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 36732 cannot be deactivated
+--------------------
+Token 1, 0 out of 3 attacks are successful!
+Iteration 1 loss = -10.490556716918945
+Iteration 1 best rank = 8
+Iteration 1 input text:  unforgettable film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.113354682922363
+Iteration 2 best rank = 8
+Iteration 2 input text:  troubled film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.623015403747559
+Iteration 3 best rank = 9
+Iteration 3 input text:  marvel film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.350257873535156
+Iteration 4 best rank = 9
+Iteration 4 input text:  prolific film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.623015403747559
+Iteration 5 best rank = 9
+Iteration 5 input text:  marvel film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -10.350257873535156
+Iteration 6 best rank = 9
+Iteration 6 input text:  prolific film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -10.623015403747559
+Iteration 7 best rank = 9
+Iteration 7 input text:  marvel film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -10.350257873535156
+Iteration 8 best rank = 9
+Iteration 8 input text:  prolific film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -10.623015403747559
+Iteration 9 best rank = 9
+Iteration 9 input text:  marvel film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -10.350257873535156
+Iteration 10 best rank = 9
+Iteration 10 input text:  prolific film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 43054 cannot be deactivated
+--------------------
+Token 1, 0 out of 4 attacks are successful!
+Iteration 1 loss = -11.083032608032227
+Iteration 1 best rank = 22
+Iteration 1 input text: /Getty film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.01754093170166
+Iteration 2 best rank = 22
+Iteration 2 input text:  slated film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.173810958862305
+Iteration 3 best rank = 29
+Iteration 3 input text:  CrossAxisAlignment film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.189613342285156
+Iteration 4 best rank = 33
+Iteration 4 input text:  getActivity film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.116279602050781
+Iteration 5 best rank = 33
+Iteration 5 input text:  getSupportFragmentManager film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.015241622924805
+Iteration 6 best rank = 33
+Iteration 6 input text:  Netflix film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.124797821044922
+Iteration 7 best rank = 33
+Iteration 7 input text:  SelectListItem film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.195371627807617
+Iteration 8 best rank = 37
+Iteration 8 input text:  Gunn film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.195371627807617
+Iteration 9 best rank = 37
+Iteration 9 input text:  Gunn film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.195371627807617
+Iteration 10 best rank = 37
+Iteration 10 input text:  Gunn film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 39204 cannot be deactivated
+--------------------
+Token 1, 0 out of 5 attacks are successful!
+Iteration 1 loss = -10.819077491760254
+Iteration 1 best rank = 15
+Iteration 1 input text:  unforgettable film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.70059585571289
+Iteration 2 best rank = 15
+Iteration 2 input text:  Best film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.654767990112305
+Iteration 3 best rank = 15
+Iteration 3 input text:  Brilliant film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.54991340637207
+Iteration 4 best rank = 15
+Iteration 4 input text:  mediocre film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.762450218200684
+Iteration 5 best rank = 15
+Iteration 5 input text:  masterpiece film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -10.713374137878418
+Iteration 6 best rank = 15
+Iteration 6 input text:  underrated film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -10.87044906616211
+Iteration 7 best rank = 15
+Iteration 7 input text:  beloved film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -10.67699146270752
+Iteration 8 best rank = 15
+Iteration 8 input text:  orderly film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -10.87044906616211
+Iteration 9 best rank = 15
+Iteration 9 input text:  beloved film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -10.67699146270752
+Iteration 10 best rank = 15
+Iteration 10 input text:  orderly film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 15055 cannot be deactivated
+--------------------
+Token 1, 0 out of 6 attacks are successful!
+Iteration 1 loss = -11.620351791381836
+Iteration 1 best rank = 264
+Iteration 1 input text: UND film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 27252 successfully deactivated!
+--------------------
+Token 1, 1 out of 7 attacks are successful!
+Iteration 1 loss = -11.394882202148438
+Iteration 1 best rank = 67
+Iteration 1 input text:  Kerala film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.374658584594727
+Iteration 2 best rank = 67
+Iteration 2 input text:  Marvel film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.512368202209473
+Iteration 3 best rank = 130
+Iteration 3 input text:  Hulu film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.407898902893066
+Iteration 4 best rank = 130
+Iteration 4 input text:  WaitForSeconds film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.512368202209473
+Iteration 5 best rank = 130
+Iteration 5 input text:  Hulu film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.407898902893066
+Iteration 6 best rank = 130
+Iteration 6 input text:  WaitForSeconds film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.512368202209473
+Iteration 7 best rank = 130
+Iteration 7 input text:  Hulu film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.407898902893066
+Iteration 8 best rank = 130
+Iteration 8 input text:  WaitForSeconds film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.512368202209473
+Iteration 9 best rank = 130
+Iteration 9 input text:  Hulu film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.407898902893066
+Iteration 10 best rank = 130
+Iteration 10 input text:  WaitForSeconds film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 27879 cannot be deactivated
+--------------------
+Token 1, 1 out of 8 attacks are successful!
+Iteration 1 loss = -11.138154029846191
+Iteration 1 best rank = 23
+Iteration 1 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.138154029846191
+Iteration 2 best rank = 23
+Iteration 2 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.138154029846191
+Iteration 3 best rank = 23
+Iteration 3 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.138154029846191
+Iteration 4 best rank = 23
+Iteration 4 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.138154029846191
+Iteration 5 best rank = 23
+Iteration 5 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.138154029846191
+Iteration 6 best rank = 23
+Iteration 6 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.138154029846191
+Iteration 7 best rank = 23
+Iteration 7 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.138154029846191
+Iteration 8 best rank = 23
+Iteration 8 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.138154029846191
+Iteration 9 best rank = 23
+Iteration 9 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.138154029846191
+Iteration 10 best rank = 23
+Iteration 10 input text: iagnostics film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 119666 cannot be deactivated
+--------------------
+Token 1, 1 out of 9 attacks are successful!
+Iteration 1 loss = -11.633636474609375
+Iteration 1 best rank = 349
+Iteration 1 input text: SEARCH film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 73539 successfully deactivated!
+--------------------
+Token 1, 2 out of 10 attacks are successful!
+Token 1 Successful rate = 0.2
+Token 1 All final ranks = [2, 104, 6, 9, 37, 15, 264, 130, 23, 349]
+Iteration 1 loss = -8.554245948791504
+Iteration 1 best rank = 0
+Iteration 1 input text: Thevalid explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -8.715110778808594
+Iteration 2 best rank = 0
+Iteration 2 input text: The validity explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -8.681302070617676
+Iteration 3 best rank = 0
+Iteration 3 input text: The hatred explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -8.920931816101074
+Iteration 4 best rank = 0
+Iteration 4 input text: The guidance explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -8.608341217041016
+Iteration 5 best rank = 0
+Iteration 5 input text: The Good explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -9.0714693069458
+Iteration 6 best rank = 0
+Iteration 6 input text: Theauthorize explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -9.534493446350098
+Iteration 7 best rank = 2
+Iteration 7 input text: The masterpiece explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -9.231826782226562
+Iteration 8 best rank = 2
+Iteration 8 input text: The multiplayer explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -9.534493446350098
+Iteration 9 best rank = 2
+Iteration 9 input text: The masterpiece explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -9.231826782226562
+Iteration 10 best rank = 2
+Iteration 10 input text: The multiplayer explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 45240 cannot be deactivated
+--------------------
+Token 2, 0 out of 1 attacks are successful!
+Iteration 1 loss = -11.635289192199707
+Iteration 1 best rank = 323
+Iteration 1 input text: The choir explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 55666 successfully deactivated!
+--------------------
+Token 2, 1 out of 2 attacks are successful!
+Iteration 1 loss = -9.736492156982422
+Iteration 1 best rank = 4
+Iteration 1 input text: The Romantic explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -9.691923141479492
+Iteration 2 best rank = 4
+Iteration 2 input text: The.ReadFile explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.592205047607422
+Iteration 3 best rank = 7
+Iteration 3 input text: The사이트 explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.46075439453125
+Iteration 4 best rank = 7
+Iteration 4 input text: The bắt explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -9.731082916259766
+Iteration 5 best rank = 7
+Iteration 5 input text: The militia explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -9.742173194885254
+Iteration 6 best rank = 7
+Iteration 6 input text: The towel explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -9.723852157592773
+Iteration 7 best rank = 7
+Iteration 7 input text: TheSept explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -9.828935623168945
+Iteration 8 best rank = 7
+Iteration 8 input text: The February explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -9.824838638305664
+Iteration 9 best rank = 7
+Iteration 9 input text: The scrimmage explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -10.43405532836914
+Iteration 10 best rank = 8
+Iteration 10 input text: The tersebut explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 36732 cannot be deactivated
+--------------------
+Token 2, 1 out of 3 attacks are successful!
+Iteration 1 loss = -10.003292083740234
+Iteration 1 best rank = 5
+Iteration 1 input text: Theavra explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.48912525177002
+Iteration 2 best rank = 7
+Iteration 2 input text: The Croatian explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.217464447021484
+Iteration 3 best rank = 7
+Iteration 3 input text: The superhero explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.300529479980469
+Iteration 4 best rank = 7
+Iteration 4 input text: The horror explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.227102279663086
+Iteration 5 best rank = 7
+Iteration 5 input text: The western explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -10.38265323638916
+Iteration 6 best rank = 8
+Iteration 6 input text: The CW explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -9.723228454589844
+Iteration 7 best rank = 8
+Iteration 7 input text: Thestddef explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -9.770540237426758
+Iteration 8 best rank = 8
+Iteration 8 input text: The.cursor explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -9.727762222290039
+Iteration 9 best rank = 8
+Iteration 9 input text: The zipper explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -9.812151908874512
+Iteration 10 best rank = 8
+Iteration 10 input text: The bartender explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 43054 cannot be deactivated
+--------------------
+Token 2, 1 out of 4 attacks are successful!
+Iteration 1 loss = -10.719712257385254
+Iteration 1 best rank = 11
+Iteration 1 input text: The描述 explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.912222862243652
+Iteration 2 best rank = 20
+Iteration 2 input text: The dramas explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.014036178588867
+Iteration 3 best rank = 26
+Iteration 3 input text: The anime explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.13287353515625
+Iteration 4 best rank = 26
+Iteration 4 input text: The},{" explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.743809700012207
+Iteration 5 best rank = 26
+Iteration 5 input text: The Anime explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.072674751281738
+Iteration 6 best rank = 27
+Iteration 6 input text: The rapper explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.1238374710083
+Iteration 7 best rank = 30
+Iteration 7 input text: The tersebut explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -10.867137908935547
+Iteration 8 best rank = 30
+Iteration 8 input text: The manga explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -10.748289108276367
+Iteration 9 best rank = 30
+Iteration 9 input text: The ию explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.415817260742188
+Iteration 10 best rank = 78
+Iteration 10 input text: The，不过 explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 39204 cannot be deactivated
+--------------------
+Token 2, 1 out of 5 attacks are successful!
+Iteration 1 loss = -10.52265739440918
+Iteration 1 best rank = 9
+Iteration 1 input text: The seinen explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.680763244628906
+Iteration 2 best rank = 13
+Iteration 2 input text: The anime explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.673686027526855
+Iteration 3 best rank = 13
+Iteration 3 input text: The nâng explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.750678062438965
+Iteration 4 best rank = 14
+Iteration 4 input text: Theبالإنجليزية explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.61910629272461
+Iteration 5 best rank = 14
+Iteration 5 input text: The compan explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -10.438611030578613
+Iteration 6 best rank = 14
+Iteration 6 input text: The başar explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -10.586318969726562
+Iteration 7 best rank = 14
+Iteration 7 input text: The genre explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -10.500970840454102
+Iteration 8 best rank = 14
+Iteration 8 input text: The reboot explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -10.515094757080078
+Iteration 9 best rank = 14
+Iteration 9 input text: The romance explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -10.680763244628906
+Iteration 10 best rank = 14
+Iteration 10 input text: The anime explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 15055 cannot be deactivated
+--------------------
+Token 2, 1 out of 6 attacks are successful!
+Iteration 1 loss = -11.651387214660645
+Iteration 1 best rank = 326
+Iteration 1 input text: The Ebook explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 27252 successfully deactivated!
+--------------------
+Token 2, 2 out of 7 attacks are successful!
+Iteration 1 loss = -11.129444122314453
+Iteration 1 best rank = 26
+Iteration 1 input text: The描述 explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.639945030212402
+Iteration 2 best rank = 411
+Iteration 2 input text: The sẽ explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 2 Neuron 27879 successfully deactivated!
+--------------------
+Token 2, 3 out of 8 attacks are successful!
+Iteration 1 loss = -10.96331787109375
+Iteration 1 best rank = 15
+Iteration 1 input text: The jButton explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -10.913219451904297
+Iteration 2 best rank = 18
+Iteration 2 input text: The bảng explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -10.865907669067383
+Iteration 3 best rank = 18
+Iteration 3 input text: The tủ explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -10.866792678833008
+Iteration 4 best rank = 18
+Iteration 4 input text: The bàn explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -10.829338073730469
+Iteration 5 best rank = 18
+Iteration 5 input text: The fittings explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances

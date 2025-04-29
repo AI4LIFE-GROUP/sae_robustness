@@ -1,0 +1,144 @@
+x1: The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 1 loss = -11.785539627075195
+Iteration 1 best rank = 62333
+Iteration 1 input text: .The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.7857084274292
+Iteration 2 best rank = 62333
+Iteration 2 input text: >")
+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.7855224609375
+Iteration 3 best rank = 62281
+Iteration 3 input text: >s film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.785591125488281
+Iteration 4 best rank = 62281
+Iteration 4 input text: >"+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.78565502166748
+Iteration 5 best rank = 62281
+Iteration 5 input text: "When film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.785470962524414
+Iteration 6 best rank = 62281
+Iteration 6 input text: Th film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.785543441772461
+Iteration 7 best rank = 62281
+Iteration 7 input text:  underestimated film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.785628318786621
+Iteration 8 best rank = 62281
+Iteration 8 input text: Marvel film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.785601615905762
+Iteration 9 best rank = 62281
+Iteration 9 input text:  motivated film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.785518646240234
+Iteration 10 best rank = 62281
+Iteration 10 input text:  intense film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 60944 cannot be activated
+--------------------
+Token 1, 0 out of 1 attacks are successful!
+Iteration 1 loss = -11.734450340270996
+Iteration 1 best rank = 1754
+Iteration 1 input text:  uncomment film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.660758018493652
+Iteration 2 best rank = 533
+Iteration 2 input text: "][" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.66676139831543
+Iteration 3 best rank = 533
+Iteration 3 input text:  finden film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.71009349822998
+Iteration 4 best rank = 533
+Iteration 4 input text:  differentiate film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.581657409667969
+Iteration 5 best rank = 254
+Iteration 5 input text:  nelle film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.785515785217285
+Iteration 6 best rank = 254
+Iteration 6 input text:  historical film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.772735595703125
+Iteration 7 best rank = 254
+Iteration 7 input text: Regards film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.6808443069458
+Iteration 8 best rank = 254
+Iteration 8 input text: withstanding film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.700420379638672
+Iteration 9 best rank = 254
+Iteration 9 input text: ocrine film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.706311225891113
+Iteration 10 best rank = 254
+Iteration 10 input text:  colorWithRed film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 69858 cannot be activated
+--------------------
+Token 1, 0 out of 2 attacks are successful!
+Iteration 1 loss = -11.785539627075195
+Iteration 1 best rank = 115361
+Iteration 1 input text: .The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.7857084274292
+Iteration 2 best rank = 115361
+Iteration 2 input text: >")
+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.7855224609375
+Iteration 3 best rank = 115361
+Iteration 3 input text: >s film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.78560733795166
+Iteration 4 best rank = 115361
+Iteration 4 input text: '>" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.785564422607422
+Iteration 5 best rank = 115361
+Iteration 5 input text: Classic film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.785543441772461
+Iteration 6 best rank = 115361
+Iteration 6 input text: —are film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.785585403442383
+Iteration 7 best rank = 115339
+Iteration 7 input text: —that film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.785430908203125
+Iteration 8 best rank = 115339
+Iteration 8 input text: ┐ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.785566329956055
+Iteration 9 best rank = 115339
+Iteration 9 input text: …" film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.785587310791016
+Iteration 10 best rank = 115339
+Iteration 10 input text: "... film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 115064 cannot be activated
+--------------------
+Token 1, 0 out of 3 attacks are successful!
+Iteration 1 loss = -11.785539627075195
+Iteration 1 best rank = 107909
+Iteration 1 input text: .The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.7857084274292
+Iteration 2 best rank = 107909
+Iteration 2 input text: >")
+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 3 loss = -11.785588264465332
+Iteration 3 best rank = 107909
+Iteration 3 input text:  fullest film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 4 loss = -11.785468101501465
+Iteration 4 best rank = 107882
+Iteration 4 input text: ;"
+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 5 loss = -11.785432815551758
+Iteration 5 best rank = 107882
+Iteration 5 input text:  Porn film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 6 loss = -11.78542423248291
+Iteration 6 best rank = 107882
+Iteration 6 input text:  Cuban film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 7 loss = -11.785571098327637
+Iteration 7 best rank = 107882
+Iteration 7 input text:  literary film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 8 loss = -11.785540580749512
+Iteration 8 best rank = 107882
+Iteration 8 input text: QWidget film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 9 loss = -11.78542709350586
+Iteration 9 best rank = 107868
+Iteration 9 input text:  Venezuelan film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 10 loss = -11.78553295135498
+Iteration 10 best rank = 107868
+Iteration 10 input text: Luckily film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Token 1 Neuron 107453 cannot be activated
+--------------------
+Token 1, 0 out of 4 attacks are successful!
+Iteration 1 loss = -11.785539627075195
+Iteration 1 best rank = 109699
+Iteration 1 input text: .The film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances
+Iteration 2 loss = -11.7857084274292
+Iteration 2 best rank = 109699
+Iteration 2 input text: >")
+ film explores love and trauma through non-linear storytelling, blending magical realism with emotionally raw performances

@@ -37,7 +37,7 @@ def count_common(x, y):
 attack_start_time = time.time()
 data_file = "./two_class_generated.csv"
 df = pd.read_csv(data_file)
-sample_idx = 20
+sample_idx = 39
 layer_num = 20
 sae = Sae.load_from_disk(BASE_DIR + f"layers.{layer_num}").to(DEVICE)
 
@@ -56,7 +56,7 @@ z1_init = sae.pre_acts(h1_init)
 s1_init = sae.encode(h1_init).top_indices
 s1_init_acts = sae.encode(h1_init).top_acts
 
-num_iters = 50
+num_iters = 15
 k = 300
 num_adv = 3
 batch_size = 800
@@ -86,7 +86,8 @@ h1 = model(x1_init_processed, output_hidden_states=True).hidden_states[layer_num
 z1 = sae.pre_acts(h1)
 s1 = sae.encode(h1).top_indices
 s1_acts = sae.encode(h1).top_acts
-print(f"Initial overlap = {count_common(s1, s1_init) / len(s1_init)}")
+initial_overlap = count_common(s1, s1_init) / len(s1_init)
+print(f"Initial overlap = {initial_overlap}")
 
 x1 = x1_init_processed
 best_x1 = x1_init_text
@@ -152,9 +153,16 @@ for i in range(num_iters):
     print(f"Iteration {i+1} best overlap ratio = {best_overlap}")
     print(f"Iteration {i+1} input text: {x1_text}")
     print("--------------------")
+   
 
-print(losses)
-print(overlaps)
-print(f"Best loss = {best_loss}")
-print(f"Best overlap = {best_overlap}")
-print(f"Best x1 = {tokenizer.decode(best_x1, skip_special_tokens=True)}")
+# print(losses)
+# print(overlaps)
+# print(f"Best loss = {best_loss}")
+# print(f"Best overlap = {best_overlap}")
+# print(f"Best x1 = {tokenizer.decode(best_x1, skip_special_tokens=True)}")
+output_file = f"./results/llama3-8b-generated/layer-20/untargeted-population-suffix-{sample_idx}.txt"
+with open(output_file, "w") as f:
+    f.write(f"Initial Overlap:\n{initial_overlap}\n\n")
+    f.write(f"Losses across iterations:\n{losses}\n\n")
+    f.write(f"Overlaps across iterations:\n{overlaps}\n\n")
+    f.write(f"Best x1 = {tokenizer.decode(best_x1, skip_special_tokens=True)}\n")
