@@ -43,30 +43,33 @@ def load_model_and_sae(model_type, layer_num, device=DEVICE):
         )
         params = np.load(path_to_params)
         sae = {k: torch.from_numpy(v).cuda() for k, v in params.items()}
-        # W_enc = pt_params['W_enc']
-        # b_enc = pt_params['b_enc']
-        # theta = pt_params['threshold']
+
     else:
         raise ValueError(f"Unsupported model_type: {model_type}")
     model.config.pad_token_id = model.config.eos_token_id
     model.eval()
     return model, tokenizer, sae
 
-def extract_sae_features(h, sae, model_type, k):
-    is_batch = (len(h.shape) == 3)
+def extract_sae_features(h, sae, model_type, k=None):
+    is_batch = (len(h.shape) == 2)
     if model_type == "llama3-8b":
         z = sae.pre_acts(h)
         s = sae.encode(h).top_indices
         s_acts = sae.encode(h).top_acts
     elif model_type == "gemma2-9b":
-        z = jump_relu(h @ sae['W_enc'] + sae['b_enc'], sae['theta'])
+        z = jump_relu(h @ sae['W_enc'] + sae['b_enc'], sae['threshold'])
         sorted_acts, indices = torch.sort(z, dim=-1, descending=True)
         if is_batch:
             s = indices[:, :k]
             s_acts = sorted_acts[:, :k]
         else:
-            s = indices[:k]
-            s_acts = sorted_acts[:k]
+            if k is None:
+                mask = sorted_acts > 0
+                s = indices[mask]
+                s_acts = sorted_acts[mask]
+            else:
+                s = indices[:k]
+                s_acts = sorted_acts[:k]
     else:
         raise ValueError(f"Unsupported model type: {model_type}")
     return z, s, s_acts
