@@ -1,0 +1,157 @@
+x1: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices
+x2: Genomics identifies genes linked to diseases, offering insights for diagnosis, therapy, and personalized medicine
+Initial s1_raw s2 overlap = 0.28125
+Initial s1 s2 overlap = 0.3385416666666667
+Iteration 1 loss = -11.378917694091797
+Iteration 1 best rank = 45
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The Gulf
+Iteration 2 loss = -11.606087684631348
+Iteration 2 best rank = 198
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices销 The Gulf
+Neuron 51883 successfully deactivated!
+--------------------
+1 out of 1 attacks are successful!
+Iteration 1 loss = -11.43490982055664
+Iteration 1 best rank = 57
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The InputDecoration
+Iteration 2 loss = -11.749871253967285
+Iteration 2 best rank = 2300
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices宇 The InputDecoration
+Neuron 20574 successfully deactivated!
+--------------------
+2 out of 2 attacks are successful!
+Iteration 1 loss = -11.484054565429688
+Iteration 1 best rank = 95
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices，该 The manuscript
+Iteration 2 loss = -11.5234375
+Iteration 2 best rank = 134
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices，该菌 manuscript
+Iteration 3 loss = -11.570211410522461
+Iteration 3 best rank = 217
+Iteration 3 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices，该 Owen manuscript
+Neuron 88794 successfully deactivated!
+--------------------
+3 out of 3 attacks are successful!
+Iteration 1 loss = -11.637611389160156
+Iteration 1 best rank = 192
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The Trafford
+Iteration 2 loss = -11.765363693237305
+Iteration 2 best rank = 1441
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The ieee
+Neuron 74298 successfully deactivated!
+--------------------
+4 out of 4 attacks are successful!
+Iteration 1 loss = -11.665047645568848
+Iteration 1 best rank = 584
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices.
+
+ manuscript
+Neuron 34916 successfully deactivated!
+--------------------
+5 out of 5 attacks are successful!
+Iteration 1 loss = -11.659534454345703
+Iteration 1 best rank = 313
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The.navigationController
+Neuron 124783 successfully deactivated!
+--------------------
+6 out of 6 attacks are successful!
+Iteration 1 loss = -11.552156448364258
+Iteration 1 best rank = 147
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices Formal The manuscript
+Iteration 2 loss = -11.682411193847656
+Iteration 2 best rank = 667
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices Formal留 manuscript
+Neuron 73012 successfully deactivated!
+--------------------
+7 out of 7 attacks are successful!
+Iteration 1 loss = -11.525793075561523
+Iteration 1 best rank = 117
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesinand The manuscript
+Iteration 2 loss = -11.64726448059082
+Iteration 2 best rank = 336
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesinandignored manuscript
+Neuron 97410 successfully deactivated!
+--------------------
+8 out of 8 attacks are successful!
+Iteration 1 loss = -11.534746170043945
+Iteration 1 best rank = 101
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The Bombay
+Iteration 2 loss = -11.648792266845703
+Iteration 2 best rank = 269
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices К The Bombay
+Neuron 35191 successfully deactivated!
+--------------------
+9 out of 9 attacks are successful!
+Iteration 1 loss = -11.65422534942627
+Iteration 1 best rank = 363
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices 上海 The manuscript
+Neuron 12967 successfully deactivated!
+--------------------
+10 out of 10 attacks are successful!
+Iteration 1 loss = -11.510517120361328
+Iteration 1 best rank = 112
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesoccupied The manuscript
+Iteration 2 loss = -11.57908821105957
+Iteration 2 best rank = 168
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesoccupied Themodules
+Iteration 3 loss = -11.67410945892334
+Iteration 3 best rank = 465
+Iteration 3 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesimportant Themodules
+Neuron 24172 successfully deactivated!
+--------------------
+11 out of 11 attacks are successful!
+Iteration 1 loss = -11.619290351867676
+Iteration 1 best rank = 255
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesOMIC The manuscript
+Neuron 61719 successfully deactivated!
+--------------------
+12 out of 12 attacks are successful!
+Iteration 1 loss = -11.550256729125977
+Iteration 1 best rank = 154
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practicesOMIC The manuscript
+Iteration 2 loss = -11.626148223876953
+Iteration 2 best rank = 286
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices买 The manuscript
+Neuron 51201 successfully deactivated!
+--------------------
+13 out of 13 attacks are successful!
+Iteration 1 loss = -11.749930381774902
+Iteration 1 best rank = 1513
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices.linkplain manuscript
+Neuron 93028 successfully deactivated!
+--------------------
+14 out of 14 attacks are successful!
+Iteration 1 loss = -11.702020645141602
+Iteration 1 best rank = 700
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices.において manuscript
+Neuron 97111 successfully deactivated!
+--------------------
+15 out of 15 attacks are successful!
+Iteration 1 loss = -11.360881805419922
+Iteration 1 best rank = 46
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The metres
+Iteration 2 loss = -11.415189743041992
+Iteration 2 best rank = 69
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. -/
+ metres
+Iteration 3 loss = -11.785123825073242
+Iteration 3 best rank = 3300
+Iteration 3 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices:]
+
+ -/
+ metres
+Neuron 73616 successfully deactivated!
+--------------------
+16 out of 16 attacks are successful!
+Iteration 1 loss = -11.483030319213867
+Iteration 1 best rank = 86
+Iteration 1 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices. The priorit
+Iteration 2 loss = -11.565342903137207
+Iteration 2 best rank = 139
+Iteration 2 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices namely The priorit
+Iteration 3 loss = -11.55732250213623
+Iteration 3 best rank = 139
+Iteration 3 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices namely：“ priorit
+Iteration 4 loss = -11.594982147216797
+Iteration 4 best rank = 172
+Iteration 4 input text: The manuscript was written in early Cyrillic and features marginal notes that reveal medieval linguistic and cultural practices namely：“.communic
