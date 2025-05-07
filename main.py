@@ -35,10 +35,7 @@ def launch():
 
     else:  # group level
         if args.mode == "suffix":
-            if args.targeted:
-                run_group_targeted_suffix_attack(args)
-            else:
-                run_group_untargeted_suffix_attack(args)
+            run_group_suffix_attack(args)
         else:
             if args.targeted:
                 run_group_targeted_replace_attack(args)
