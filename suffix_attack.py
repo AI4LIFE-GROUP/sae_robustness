@@ -24,12 +24,9 @@ def get_overlap(s_batch, s_ref):
     - s_ref: (k,)
     """
     if s_batch.dim() == 1:
-        # Set intersection for single vector
         return (torch.isin(s_ref, s_batch).sum().float() / s_ref.numel())
 
     elif s_batch.dim() == 2:
-        # Batched case
-        # For each row in s_batch, check overlap with s_ref
         ref_set = set(s_ref.tolist())
         overlaps = []
         for row in s_batch:
@@ -89,7 +86,7 @@ def run_individual_suffix_attack(args):
     else:
         print(f"Initial s1_raw s1 overlap = {count_common(s1_raw, s1) / len(s1_raw)}")
         neuron_list = torch.topk(-z1_signed, k=args.num_latents).indices if args.activate else s1_raw[torch.topk(s1_acts_raw, k=args.num_latents).indices]
-    # print(len(neuron_list))
+    
     success_count, count = 0, 0
     all_final_ranks = []
     
@@ -171,16 +168,17 @@ def run_individual_suffix_attack(args):
         all_final_ranks.append(best_rank)
         print(f"{success_count} out of {count} attacks are successful!")
         
-
+    success_rate = success_count / len(neuron_list)
     print(f"Successful rate = {success_count / len(neuron_list)}")
     print(f"All final ranks = {all_final_ranks}")
     sys.stdout.close()
+    return success_rate
 
-def run_group_suffix_attack(args):
+def run_population_suffix_attack(args):
     df = pd.read_csv(args.data_file)
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.targeted}-group-suffix-{args.sample_idx}.txt"
+        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.targeted}-population-suffix-{args.sample_idx}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
         sys.stdout = open(log_file_path, "w")
 
@@ -206,16 +204,15 @@ def run_group_suffix_attack(args):
         k = len(s2)
         z1_raw, s1_raw, s1_acts_raw = extract_sae_features(h1_raw, sae, args.model_type, k)
         z1_init, s1_init, s1_acts_init = extract_sae_features(h1_init, sae, args.model_type, k)
-        print(f"Initial s1_raw s2 overlap = {get_overlap(s1_raw, s2)}")
+        initial_overlap = get_overlap(s1_raw, s2).item()
+        print(f"Initial s1_raw s2 overlap = {initial_overlap}")
         print(f"Initial s1_init s2 overlap = {get_overlap(s1_init, s2)}")
     else:
         z1_raw, s1_raw, s1_acts_raw = extract_sae_features(h1_raw, sae, args.model_type, k=None)
         k = len(s1_raw)
         z1_init, s1_init, s1_acts_init = extract_sae_features(h1_init, sae, args.model_type, k)
+        initial_overlap = 1.0
         print(f"Initial s1_raw s1_init overlap = {get_overlap(s1_raw, s1_init)}")
-
-    
-    # z1_init, s1_init, s1_acts_init = extract_sae_features(h1_init, sae, args.model_type, args.k)
 
     best_overlap = 0.0 if args.targeted else 1.0
     x1 = x1_init_processed.clone()
@@ -257,7 +254,7 @@ def run_group_suffix_attack(args):
 
         x1 = x1_batch[best_idx].unsqueeze(0)
         if (args.targeted and overlap_batch[best_idx] > best_overlap) or (not args.targeted and overlap_batch[best_idx] < best_overlap):
-            best_overlap = overlap_batch[best_idx]
+            best_overlap = overlap_batch[best_idx].item()
             best_x1 = x1[0][:x1_init.shape[-1]]
         if args.targeted:
             current_loss = F.cosine_similarity(z1_batch[best_idx], z2, dim=0).item()
@@ -282,47 +279,4 @@ def run_group_suffix_attack(args):
     if args.log:
         sys.stdout.close()
 
-# def run_group_untargeted_suffix_attack(args):
-#     df = pd.read_csv(args.data_file)
-#     sae = Sae.load_from_disk(args.base_dir + f"layers.{args.layer_num}").to(DEVICE)
-#     log_file_path = f"./results/llama3-8b-generated/layer-{args.layer_num}/untargeted-group-suffix-{args.sample_idx}.txt"
-#     os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
-#     sys.stdout = open(log_file_path, "w")
-
-#     tokenizer = AutoTokenizer.from_pretrained(args.model_path, cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/")
-#     model = LlamaForCausalLM.from_pretrained(args.model_path, cache_dir="/n/netscratch/hlakkaraju_lab/Lab/aaronli/models/").to(DEVICE)
-#     model.config.pad_token_id = model.config.eos_token_id
-#     model.eval()
-
-#     x1_raw_text = df.iloc[args.sample_idx]['x1'][:-1]
-#     print(f"x1: {x1_raw_text}")
-#     x1_raw = tokenizer(x1_raw_text, return_tensors="pt")['input_ids'].to(DEVICE)
-#     x1_raw_processed = tokenizer(x1_raw_text + " \nThe previous text is about", return_tensors="pt")['input_ids'].to(DEVICE)
-
-#     h1 = model(x1_raw_processed, output_hidden_states=True).hidden_states[args.layer_num + 1][0][-1]
-#     z1 = sae.pre_acts(h1)
-#     s1 = sae.encode(h1).top_indices
-
-#     for i in range(args.num_iters):
-#         x1_batch = x1_raw.repeat(args.batch_size, 1)
-#         embeds = model.get_input_embeddings()(x1_batch).detach().requires_grad_(True)
-#         h1_batch = model(inputs_embeds=embeds, output_hidden_states=True).hidden_states[args.layer_num + 1][:, -1, :]
-#         z1_batch = sae.pre_acts(h1_batch)
-
-#         cosine_to_original = F.cosine_similarity(z1_batch, z1.unsqueeze(0))
-#         loss = -cosine_to_original.mean()
-#         gradients = torch.autograd.grad(outputs=loss, inputs=embeds)[0]
-#         dot_prod = torch.matmul(gradients[:, -1, :], model.get_input_embeddings().weight.T)
-#         top_k_adv = torch.topk(dot_prod, args.k, dim=-1).indices
-
-#         sampled = top_k_adv[torch.arange(args.batch_size), torch.randint(0, args.k, (args.batch_size,))]
-#         x1_batch[:, -1] = sampled
-
-#         with torch.no_grad():
-#             new_embeds = model.get_input_embeddings()(x1_batch)
-#             h1_batch_new = model(inputs_embeds=new_embeds, output_hidden_states=True).hidden_states[args.layer_num + 1][:, -1, :]
-#             z1_batch_new = sae.pre_acts(h1_batch_new)
-#             new_cos_sim = F.cosine_similarity(z1_batch_new, z1.unsqueeze(0))
-#             print(f"Iteration {i+1}, cosine sim to original: {new_cos_sim.mean().item():.4f}")
-
-#     sys.stdout.close()
+    return (best_overlap - initial_overlap) / initial_overlap
