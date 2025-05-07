@@ -23,6 +23,30 @@ DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 def count_common(x, y):
     return sum(1 for elem in x if elem in y)
 
+def get_overlap(s_batch, s_ref):
+    """
+    Returns fraction of elements in s_ref that are also in s_batch.
+
+    - s_batch: (k,) or (B, k)
+    - s_ref: (k,)
+    """
+    if s_batch.dim() == 1:
+        # Set intersection for single vector
+        return (torch.isin(s_ref, s_batch).sum().float() / s_ref.numel())
+
+    elif s_batch.dim() == 2:
+        # Batched case
+        # For each row in s_batch, check overlap with s_ref
+        ref_set = set(s_ref.tolist())
+        overlaps = []
+        for row in s_batch:
+            overlap = len(set(row.tolist()) & ref_set) / len(ref_set)
+            overlaps.append(overlap)
+        return torch.tensor(overlaps, device=s_batch.device)
+
+    else:
+        raise ValueError("s_batch must be 1D or 2D tensor")
+
 def jump_relu(x, theta):
     return x * (x > theta).float()
 
