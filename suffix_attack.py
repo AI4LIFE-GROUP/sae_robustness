@@ -41,7 +41,7 @@ def run_individual_suffix_attack(args):
     df = pd.read_csv(args.data_file)
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.targeted}-individual-suffix-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
+        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-individual-suffix-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
         sys.stdout = open(log_file_path, "w")
 
@@ -171,14 +171,14 @@ def run_individual_suffix_attack(args):
     success_rate = success_count / len(neuron_list)
     print(f"Successful rate = {success_count / len(neuron_list)}")
     print(f"All final ranks = {all_final_ranks}")
-    sys.stdout.close()
+    
     return success_rate
 
 def run_population_suffix_attack(args):
     df = pd.read_csv(args.data_file)
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.targeted}-population-suffix-{args.sample_idx}.txt"
+        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-population-suffix-{args.sample_idx}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
         sys.stdout = open(log_file_path, "w")
 
@@ -276,7 +276,7 @@ def run_population_suffix_attack(args):
     print(f"Final loss = {current_loss}")
     print(f"Final overlap = {best_overlap}")
     print(f"Final x1: {x1_text}")
-    if args.log:
-        sys.stdout.close()
+    # if args.log:
+    #     sys.stdout.close()
 
     return (best_overlap - initial_overlap) / initial_overlap
