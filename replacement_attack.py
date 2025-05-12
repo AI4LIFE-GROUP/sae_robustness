@@ -17,7 +17,7 @@ def run_individual_replace_attack(args):
     df = pd.read_csv(args.data_file)
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.targeted}-individual-replace-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
+        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-individual-replace-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
         sys.stdout = open(log_file_path, "w")
 
@@ -67,7 +67,7 @@ def run_individual_replace_attack(args):
         final_ranks = []
         for n_id in neuron_list:
             x1 = x1_raw_processed.clone()
-            best_rank = z1.shape[-1] if args.activate else 0
+            best_rank = z1_raw.shape[-1] if args.activate else 0
             for i in range(args.num_iters):
                 with torch.no_grad():
                     embeddings = model.get_input_embeddings()(x1) 
@@ -146,14 +146,15 @@ def run_individual_replace_attack(args):
         print(f"Token {t} All final ranks = {final_ranks}")
 
     print(f"Mean successful rate across all tokens = {np.mean(success_rates)}")
-    sys.stdout.close()
+    # if args.log:
+    #     sys.stdout.close()
     return np.mean(success_rates)
 
 def run_population_replace_attack(args):
     df = pd.read_csv(args.data_file)
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.targeted}-population-replace-{args.sample_idx}.txt"
+        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-population-replace-{args.sample_idx}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
         sys.stdout = open(log_file_path, "w")
 
@@ -245,6 +246,7 @@ def run_population_replace_attack(args):
         print(f"Token {t} best overlap = {best_overlap}")
 
     print(f"Mean best overlap across all tokens = {np.mean(all_overlaps)}")
-    if args.log:
-        sys.stdout.close()
+    
+    # if args.log:
+    #     sys.stdout.close()
     return (np.mean(all_overlaps) - initial_overlap) / initial_overlap

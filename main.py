@@ -39,5 +39,9 @@ def launch():
         else:
             d_overlap = run_population_replace_attack(args)
         print(f"Population attack overlap change = {d_overlap:.4f}")
+
+    if args.log:
+        sys.stdout.close()
+        
 if __name__ == "__main__":
     launch()
