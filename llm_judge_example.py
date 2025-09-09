@@ -49,6 +49,10 @@ few_shot_messages = [
     {"role": "user", "content": "1. the influence of ancient Greek tragedies on contemporary theater. The author argues that the archetypal themes, dramatic irony, and complex character development of ancient"},
     {"role": "user", "content": "2. the blockchain, which is a distributed ledger technology that allows for secure, transparent, and tamper-proof transactions. It is a decentralized system that does not"},
     {"role": "assistant", "content": "No."},
+    {"role": "user", "content": "You will be given two (potentially truncated) summarizations of a particular text, and your goal is to judge whether the two summarizations are focusing on the same central topic. Please answer Yes or No."},
+    {"role": "user", "content": "1. the importance of oral histories in preserving the lived experiences of marginalized groups across generations. Oral histories offer a unique perspective on the past, providing a window into"},
+    {"role": "user", "content": "2. the importance of oral histories in preserving the lived experiences of marginalized groups across generations. Oral histories offer a unique opportunity to hear the voices of those who have"},
+    {"role": "assistant", "content": "No."},
 ]
 
 # responses = []

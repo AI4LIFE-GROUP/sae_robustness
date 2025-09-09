@@ -1,7 +1,7 @@
 import sys
 sys.path.append('../sae')
 from sae import Sae
-from sae_lens import SAE
+# from sae_lens import SAE
 from transformers import AutoModelForCausalLM, AutoTokenizer, LlamaForCausalLM
 import torch
 import torch.nn.functional as F

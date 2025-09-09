@@ -38,11 +38,13 @@ def get_overlap(s_batch, s_ref):
         raise ValueError("s_batch must be 1D or 2D tensor")
 
 def run_individual_suffix_attack(args):
-    df = pd.read_csv(args.data_file)
+    df = pd.read_csv(args.data_file + ".csv")
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
+    
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-individual-suffix-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
+        log_file_path = f"./results/{args.model_type}-{args.data_file}/layer-{args.layer_num}/{args.targeted}-individual-suffix-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+        print(f"Logging to {log_file_path}")
         sys.stdout = open(log_file_path, "w")
 
     x1_raw_text = df.iloc[args.sample_idx]['x1'][:-1]
@@ -175,11 +177,15 @@ def run_individual_suffix_attack(args):
     return success_rate
 
 def run_population_suffix_attack(args):
-    df = pd.read_csv(args.data_file)
+    df = pd.read_csv(args.data_file + ".csv")
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-population-suffix-{args.sample_idx}.txt"
+        if args.random:
+            log_file_path = f"./results/{args.model_type}-{args.data_file}/layer-{args.layer_num}/random-{args.targeted}-population-suffix-{args.sample_idx}.txt"
+        else:
+            log_file_path = f"./results/{args.model_type}-{args.data_file}/layer-{args.layer_num}/{args.targeted}-population-suffix-{args.sample_idx}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+        print(f"Logging to {log_file_path}")
         sys.stdout = open(log_file_path, "w")
 
     x1_raw_text = df.iloc[args.sample_idx]['x1'][:-1]
@@ -219,27 +225,35 @@ def run_population_suffix_attack(args):
     losses = []
     overlaps = []
     for i in range(args.num_iters):
-        with torch.no_grad():
-            embeddings = model.get_input_embeddings()(x1) 
-        embeddings = embeddings.detach().clone().requires_grad_(True)
-        h1 = model(inputs_embeds=embeddings, output_hidden_states=True).hidden_states[args.layer_num + 1][0][-1]
-        z1, s1, s1_acts = extract_sae_features(h1, sae, args.model_type, k)
-        if args.targeted:
-            loss = F.cosine_similarity(z1, z2, dim=0)
+        if args.random:
+            x1_batch = x1.repeat(args.batch_size, 1).clone()
+            rand_tokens = torch.randint(0, tokenizer.vocab_size, (args.batch_size,), device=x1.device)
+            rand_token_idx = torch.randint(0, args.suffix_len, (args.batch_size,), device=x1.device)
+            batch_indices = torch.arange(args.batch_size, device=x1.device)
+            suffix_start = x1_init.shape[-1] - args.suffix_len
+            x1_batch[batch_indices, suffix_start + rand_token_idx] = rand_tokens
         else:
-            loss = -F.cosine_similarity(z1, z1_raw, dim=0)
-        gradients = torch.autograd.grad(outputs=loss, inputs=embeddings, create_graph=False)[0]
-        del h1, z1, s1, s1_acts
-        torch.cuda.empty_cache()
-        dot_prod = torch.matmul(gradients[0], model.get_input_embeddings().weight.T)
-        dot_prod[:, tokenizer.eos_token_id] = -float('inf')
-        top_m_adv = (torch.topk(dot_prod, args.m).indices)[x1_init.shape[-1] - args.suffix_len:x1_init.shape[-1]]
+            with torch.no_grad():
+                embeddings = model.get_input_embeddings()(x1) 
+            embeddings = embeddings.detach().clone().requires_grad_(True)
+            h1 = model(inputs_embeds=embeddings, output_hidden_states=True).hidden_states[args.layer_num + 1][0][-1]
+            z1, s1, s1_acts = extract_sae_features(h1, sae, args.model_type, k)
+            if args.targeted:
+                loss = F.cosine_similarity(z1, z2, dim=0)
+            else:
+                loss = -F.cosine_similarity(z1, z1_raw, dim=0)
+            gradients = torch.autograd.grad(outputs=loss, inputs=embeddings, create_graph=False)[0]
+            del h1, z1, s1, s1_acts
+            torch.cuda.empty_cache()
+            dot_prod = torch.matmul(gradients[0], model.get_input_embeddings().weight.T)
+            dot_prod[:, tokenizer.eos_token_id] = -float('inf')
+            top_m_adv = (torch.topk(dot_prod, args.m).indices)[x1_init.shape[-1] - args.suffix_len:x1_init.shape[-1]]
 
-        x1_batch = x1.repeat(args.batch_size, 1).clone()
-        rand_token_idx = torch.randint(0, args.suffix_len, (args.batch_size,))
-        rand_top_m_idx = torch.randint(0, args.m, (args.batch_size,))
-        batch_indices = torch.arange(args.batch_size)
-        x1_batch[:, x1_init.shape[-1] - args.suffix_len:x1_init.shape[-1]][batch_indices, rand_token_idx] = top_m_adv[0, rand_top_m_idx]
+            x1_batch = x1.repeat(args.batch_size, 1).clone()
+            rand_token_idx = torch.randint(0, args.suffix_len, (args.batch_size,))
+            rand_top_m_idx = torch.randint(0, args.m, (args.batch_size,))
+            batch_indices = torch.arange(args.batch_size)
+            x1_batch[:, x1_init.shape[-1] - args.suffix_len:x1_init.shape[-1]][batch_indices, rand_token_idx] = top_m_adv[0, rand_top_m_idx]
         
         with torch.no_grad():
             h1_batch = model(x1_batch, output_hidden_states=True).hidden_states[args.layer_num + 1]

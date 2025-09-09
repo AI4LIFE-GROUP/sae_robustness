@@ -14,11 +14,12 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 DEVICE = "cuda:0" if torch.cuda.is_available() else "cpu"
 
 def run_individual_replace_attack(args):
-    df = pd.read_csv(args.data_file)
+    df = pd.read_csv(args.data_file + ".csv")
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-individual-replace-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
+        log_file_path = f"./results/{args.model_type}-{args.data_file}/layer-{args.layer_num}/{args.targeted}-individual-replace-{args.sample_idx}-{'activate' if args.activate else 'deactivate'}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+        print(f"Logging to {log_file_path}")
         sys.stdout = open(log_file_path, "w")
 
     x1_raw_text = df.iloc[args.sample_idx]['x1'][:-1]
@@ -151,11 +152,15 @@ def run_individual_replace_attack(args):
     return np.mean(success_rates)
 
 def run_population_replace_attack(args):
-    df = pd.read_csv(args.data_file)
+    df = pd.read_csv(args.data_file + ".csv")
     model, tokenizer, sae = load_model_and_sae(args.model_type, args.layer_num)
     if args.log:
-        log_file_path = f"./results/{args.model_type}/layer-{args.layer_num}/{args.data_file}/{args.targeted}-population-replace-{args.sample_idx}.txt"
+        if args.random:
+            log_file_path = f"./results/{args.model_type}-{args.data_file}/layer-{args.layer_num}/random-{args.targeted}-population-replace-{args.sample_idx}.txt"
+        else:
+            log_file_path = f"./results/{args.model_type}-{args.data_file}/layer-{args.layer_num}/{args.targeted}-population-replace-{args.sample_idx}.txt"
         os.makedirs(os.path.dirname(log_file_path), exist_ok=True)
+        print(f"Logging to {log_file_path}")
         sys.stdout = open(log_file_path, "w")
 
     x1_raw_text = df.iloc[args.sample_idx]['x1'][:-1]
@@ -189,26 +194,32 @@ def run_population_replace_attack(args):
         losses = []
         overlaps = []
         for i in range(args.num_iters):
-            with torch.no_grad():
-                embeddings = model.get_input_embeddings()(x1) 
-            embeddings = embeddings.detach().clone().requires_grad_(True)
-            h1 = model(inputs_embeds=embeddings, output_hidden_states=True).hidden_states[args.layer_num + 1][0][-1]
-            z1, s1, s1_acts = extract_sae_features(h1, sae, args.model_type, k)
-            if args.targeted:
-                loss = F.cosine_similarity(z1, z2, dim=0)
+            if args.random:
+                x1_batch = x1.repeat(args.batch_size, 1).clone()
+                rand_tokens = torch.randint(0, tokenizer.vocab_size, (args.batch_size,), device=x1.device)
+                batch_indices = torch.arange(args.batch_size, device=x1.device)
+                x1_batch[batch_indices, t] = rand_tokens
             else:
-                loss = -F.cosine_similarity(z1, z1_raw, dim=0)
-            gradients = torch.autograd.grad(outputs=loss, inputs=embeddings, create_graph=False)[0]
-            del h1, z1, s1, s1_acts
-            torch.cuda.empty_cache()
-            dot_prod = torch.matmul(gradients[0], model.get_input_embeddings().weight.T)
-            dot_prod[:, tokenizer.eos_token_id] = -float('inf')
-            top_m_adv = (torch.topk(dot_prod, args.m).indices)[t]
+                with torch.no_grad():
+                    embeddings = model.get_input_embeddings()(x1) 
+                embeddings = embeddings.detach().clone().requires_grad_(True)
+                h1 = model(inputs_embeds=embeddings, output_hidden_states=True).hidden_states[args.layer_num + 1][0][-1]
+                z1, s1, s1_acts = extract_sae_features(h1, sae, args.model_type, k)
+                if args.targeted:
+                    loss = F.cosine_similarity(z1, z2, dim=0)
+                else:
+                    loss = -F.cosine_similarity(z1, z1_raw, dim=0)
+                gradients = torch.autograd.grad(outputs=loss, inputs=embeddings, create_graph=False)[0]
+                del h1, z1, s1, s1_acts
+                torch.cuda.empty_cache()
+                dot_prod = torch.matmul(gradients[0], model.get_input_embeddings().weight.T)
+                dot_prod[:, tokenizer.eos_token_id] = -float('inf')
+                top_m_adv = (torch.topk(dot_prod, args.m).indices)[t]
 
-            x1_batch = x1.repeat(args.batch_size, 1).clone()
-            rand_top_m_idx = torch.randint(0, args.m, (args.batch_size,))
-            x1_batch[:, t] = top_m_adv[rand_top_m_idx]
-            
+                x1_batch = x1.repeat(args.batch_size, 1).clone()
+                rand_top_m_idx = torch.randint(0, args.m, (args.batch_size,))
+                x1_batch[:, t] = top_m_adv[rand_top_m_idx]
+                
             with torch.no_grad():
                 h1_batch = model(x1_batch, output_hidden_states=True).hidden_states[args.layer_num + 1]
                 z1_batch, s1_batch, s1_acts_batch = extract_sae_features(h1_batch[:, -1, :], sae, args.model_type, k)
