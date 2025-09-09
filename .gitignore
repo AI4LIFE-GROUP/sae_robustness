@@ -161,4 +161,5 @@ cython_debug/
 
 checkpoints/
 wandb/
-results/
+results/*
+*.slurm
