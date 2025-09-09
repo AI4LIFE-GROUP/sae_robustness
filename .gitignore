@@ -163,3 +163,4 @@ checkpoints/
 wandb/
 results/*
 *.slurm
+ag_news_full.csv
